@@ -682,8 +682,8 @@ header .burger-menu {
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0px 0px 31.7px 0px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
-  padding-left: 52px;
-  padding-right: 52px;
+  padding-left: 50px;
+  padding-right: 50px;
   padding-top: 68px;
   margin-left: -15px;
 }
@@ -1816,6 +1816,11 @@ footer .footer_logo img {
   background-color: white;
   -webkit-mask: url(../../bbfa85e1f0a796f2cd06.svg) no-repeat center/contain;
           mask: url(../../bbfa85e1f0a796f2cd06.svg) no-repeat center/contain;
+}
+
+input[type=checkbox] {
+  margin: 0px;
+  padding: 0px;
 }
 
 .input-container input::placeholder {
