@@ -5121,7 +5121,8 @@ class Landing {
       btnCloseModal,
       modalCallback,
       modalInfo,
-      modalForm
+      modalForm,
+      modalPersonalData
     } = _ref;
     this.elements = {
       handContainer: document.querySelector('.' + handContainer),
@@ -5141,7 +5142,8 @@ class Landing {
     this.modals = {
       modalCallback: document.getElementById(modalCallback),
       modalInfo: document.getElementById(modalInfo),
-      modalForm: document.getElementById(modalForm)
+      modalForm: document.getElementById(modalForm),
+      modalPersonalData: document.getElementById(modalPersonalData)
     };
     this.handResizeBlocks();
     this.handAnimation();
@@ -5439,7 +5441,8 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCloseModal: '.close',
     modalCallback: "modalCallback",
     modalInfo: "modalInfo",
-    modalForm: "modalForm"
+    modalForm: "modalForm",
+    modalPersonalData: "modalPersonalData"
   });
 });
 

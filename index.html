@@ -433,7 +433,11 @@
             <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
             <div class="callback_checkbox_container">
               <input type="checkbox" id="callback_checkbox">
-              <label for="callback_checkbox" class="font-400-14">Согласие на обработку персональных данных</label>
+              <label for="callback_checkbox" class="font-400-14 js-openModalBtn" ></label>
+
+              <div class="js-openModalBtn button_personan_data" data-modal="modalPersonalData">
+                Согласие на обработку персональных данных
+              </div>
             </div>
           </form>
 
@@ -836,7 +840,14 @@
         <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
         <div class="callback_checkbox_container">
           <input type="checkbox" id="cformCallback_checkbox" required>
-          <label for="cformCallback_checkbox" class="font-400-14">Согласие на обработку персональных данных</label>
+
+          <label for="cformCallback_checkbox" class="font-400-14"></label>
+          <div class="js-openModalBtn button_personan_data" data-modal="modalPersonalData">
+            Согласие на обработку персональных данных
+          </div>
+          <div>
+            
+          </div>
         </div>
       </form>
     </div>
@@ -924,7 +935,10 @@
         <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
         <div class="callback_checkbox_container">
           <input type="checkbox" id="form_checkbox" required>
-          <label for="form_checkbox" class="font-400-14">Согласие на обработку персональных данных</label>
+          <label for="form_checkbox" class="font-400-14"></label>
+          <div class="js-openModalBtn button_personan_data" data-modal="modalPersonalData">
+            Согласие на обработку персональных данных
+          </div>
         </div>
       </form>
     </div>
@@ -946,6 +960,22 @@
       <p>Разработка сайта ведется на сервере исполнителя. После завершения работ и принятия работ Заказчиком Исполнитель
         переносит сайт на сервер Заказчика. Заказчик предоставляет для этого необходимые доступы. Исполнитель
         предоставляет заказчику.</p>
+    </div>
+  </div>
+
+  <div id="modalPersonalData" class="modal">
+    <div class="modal-content modal-content__info">
+      <span class="close"></span>
+      <p>Я, ФИО, настоящим даю свое согласие на обработку моих персональных данных, включая сбор, запись,
+        систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование,
+        передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление,
+        уничтожение персональных данных, а также осуществление любых иных действий с
+        моими персональными данными с учетом действующего законодательства Российской Федерации.</p>
+        <p>Я проинформирован, что под обработкой персональных данных понимаются действия (операции) с 
+          персональными данными, включая сбор, запись, систематизацию, накопление, хранение,
+          уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ),
+          обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
+          <p>Я подтверждаю, что, давая такое согласие, я действую по собственной воле и в своих интересах.</p>
     </div>
   </div>
 
