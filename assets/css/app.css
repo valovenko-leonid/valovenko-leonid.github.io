@@ -1684,26 +1684,39 @@ footer .footer_logo img {
   transform: scale(1.3);
 }
 
-.card-slider-brands {
+.card-brands {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-self: start;
+  align-items: center;
+  overflow: hidden;
+  margin-top: auto;
 }
-.card-slider-brands .swiper-slide img {
+.card-brands .card-brands-slide img {
   max-width: 100px;
   max-height: 40px;
   height: auto;
   width: auto;
+  opacity: 0.5;
+  transition: 0.12s;
+  cursor: pointer;
 }
-.card-slider-brands .swiper-slide {
+.card-brands .card-brands-slide img:hover {
+  opacity: 1;
+}
+.card-brands .card-brands-slide {
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 100px;
   max-height: 40px;
 }
-.card-slider-brands .swiper-slide:last-child {
+.card-brands .card-brands-slide:last-child {
   margin-right: 50px;
 }
-.card-slider-brands::after {
+.card-brands::after {
   content: "";
   z-index: 5;
   position: absolute;
@@ -1715,7 +1728,7 @@ footer .footer_logo img {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(62, 65, 78) 50%, rgb(62, 65, 78) 100%);
   pointer-events: none;
 }
-.card-slider-brands .swiper-button-next {
+.card-brands .card-brands-button-next {
   position: absolute;
   top: 50%;
   right: 10px;

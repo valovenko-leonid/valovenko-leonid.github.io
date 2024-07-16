@@ -16,8 +16,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
 
-    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
-    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet"></link>
+  <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+  <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
+  </link>
 
 <link rel="icon" href="favicon.ico"><script defer src="assets/js/app.js"></script><link href="assets/css/app.css" rel="stylesheet"></head>
 
@@ -103,15 +104,14 @@
               <div class="card-title font-700-24">Промышленное оборудование</div>
               <div class="card-desc font-400-14">От компонентов микроэлектроники до полнофункциональных систем</div>
 
-              <div class="swiper-container card-slider-brands">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="static/img/logo/Siemens.svg" alt="Siemens"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/22.png" alt="Image 1"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/Yokogawa.svg" alt="Yokogawa"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/Honeywell.svg" alt="Honeywell"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/7.png" alt="Image 1"></div>
-                </div>
-                <div class="swiper-button-next"></div>
+              <div class="card-brands">
+                <div class="card-brands-slide"><img src="static/img/logo/siemens.png" onclick="goToSlide('#section_supply')" alt="Siemens"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/endress.png" onclick="goToSlide('#section_supply')" alt="Image 1"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/yokogawa.png" onclick="goToSlide('#section_supply')" alt="Yokogawa"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/honeywell.png" onclick="goToSlide('#section_supply')" alt="Honeywell"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/schneider.png" onclick="goToSlide('#section_supply')" alt="Image 1"></div>
+
+                <div class="card-brands-button-next" onclick="goToSlide('#section_supply')"></div>
               </div>
 
             </div>
@@ -124,17 +124,14 @@
             <div class="back">
               <div class="card-title font-700-24">Серверно-сетевое оборудование</div>
               <div class="card-desc font-400-14">Серверы, СХД, ВКС маршрутизаторы и коммутаторы.</div>
-              <div class="swiper-container card-slider-brands">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide"><img src="static/img/logo/Dell.svg" alt="Dell"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/Huawei.svg" alt="Huawei"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/lenovo.svg" alt="lenovo"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/Advantech.svg" alt="Advantech"></div>
-                  <div class="swiper-slide"><img src="static/img/logo/Cisco.svg" alt="Cisco"></div>
-                </div>
-                <div class="swiper-button-next"></div>
+              <div class="card-brands">
+                <div class="card-brands-slide"><img src="static/img/logo/dell.png" onclick="goToSlide('#section_supply')" alt="Dell"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/huawei.png" onclick="goToSlide('#section_supply')" alt="Huawei"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/lenovo.png" onclick="goToSlide('#section_supply')" alt="lenovo"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/adwantech.png" onclick="goToSlide('#section_supply')" alt="Advantech"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/cisco.png" onclick="goToSlide('#section_supply')" alt="Cisco"></div>
+                <div class="card-brands-button-next" onclick="goToSlide('#section_supply')"></div>
               </div>
-
             </div>
           </div>
           <div class="reserse-card card-big block">
@@ -408,7 +405,7 @@
               <span class="focus-border"></span>
             </div>
             <div class="input-container">
-              <input id="callback_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required >
+              <input id="callback_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
               <label for="callback_phone">Телефон</label>
               <span class="focus-border"></span>
 
@@ -433,7 +430,7 @@
             <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
             <div class="callback_checkbox_container">
               <input type="checkbox" id="callback_checkbox">
-              <label for="callback_checkbox" class="font-400-14 js-openModalBtn" ></label>
+              <label for="callback_checkbox" class="font-400-14 js-openModalBtn"></label>
 
               <div class="js-openModalBtn button_personan_data" data-modal="modalPersonalData">
                 Согласие на обработку персональных данных
@@ -779,7 +776,7 @@
           <span class="focus-border"></span>
         </div>
 
-     
+
         <div class="input-container">
           <select class="contact_method" id="selectElement" required>
             <option value="" disabled selected>Как с Вами связаться?</option>
@@ -791,7 +788,8 @@
 
         </div>
         <div class="input-container input_hidden form_phone_container">
-          <input name="form_phone" id="form_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+          <input name="form_phone" id="form_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__"
+            required>
           <label class="font-h5" for="form_phone">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
@@ -819,7 +817,8 @@
 
         </div>
         <div class="input-container input_hidden form_phone_alter_container">
-          <input name="form_phone_alter" id="form_phone_alter" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+          <input name="form_phone_alter" id="form_phone_alter" type="text" autocomplete="tel"
+            placeholder="+7 (___) ___-__-__" required>
           <label class="font-h5" for="form_phone_alter">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
@@ -846,7 +845,7 @@
             Согласие на обработку персональных данных
           </div>
           <div>
-            
+
           </div>
         </div>
       </form>
@@ -885,7 +884,8 @@
 
 
         <div class="input-container input_hidden form_phone_container">
-          <input name="form_phone" id="form_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+          <input name="form_phone" id="form_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__"
+            required>
           <label class="font-h5" for="form_phone">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
@@ -913,7 +913,8 @@
         </div>
 
         <div class="input-container input_hidden form_phone_alter_container">
-          <input name="form_phone_alter" id="form_phone_alter" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
+          <input name="form_phone_alter" id="form_phone_alter" type="text" autocomplete="tel"
+            placeholder="+7 (___) ___-__-__" required>
           <label class="font-h5" for="form_phone_alter">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
@@ -971,11 +972,11 @@
         передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление,
         уничтожение персональных данных, а также осуществление любых иных действий с
         моими персональными данными с учетом действующего законодательства Российской Федерации.</p>
-        <p>Я проинформирован, что под обработкой персональных данных понимаются действия (операции) с 
-          персональными данными, включая сбор, запись, систематизацию, накопление, хранение,
-          уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ),
-          обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
-          <p>Я подтверждаю, что, давая такое согласие, я действую по собственной воле и в своих интересах.</p>
+      <p>Я проинформирован, что под обработкой персональных данных понимаются действия (операции) с
+        персональными данными, включая сбор, запись, систематизацию, накопление, хранение,
+        уточнение (обновление, изменение), извлечение, использование, передачу (предоставление, доступ),
+        обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
+      <p>Я подтверждаю, что, давая такое согласие, я действую по собственной воле и в своих интересах.</p>
     </div>
   </div>
 
@@ -1016,19 +1017,19 @@
       }
     }
 
-    const arrayListSliders = document.querySelectorAll(".card-slider-brands");
+    // const arrayListSliders = document.querySelectorAll(".card-slider-brands");
 
-    arrayListSliders.forEach((slider) => {
-      new Swiper(slider, {
-        direction: 'horizontal',
-        grabCursor: true,
-        slidesPerView: 'auto',
-        spaceBetween: 30,
-        navigation: {
-          nextEl: '.swiper-button-next',
-        },
-      });
-    });
+    // arrayListSliders.forEach((slider) => {
+    //   new Swiper(slider, {
+    //     direction: 'horizontal',
+    //     grabCursor: true,
+    //     slidesPerView: 'auto',
+    //     spaceBetween: 30,
+    //     navigation: {
+    //       nextEl: '.swiper-button-next',
+    //     },
+    //   });
+    // });
 
     initSwiper();
 
@@ -1042,13 +1043,9 @@
 
 
     function goToSlide(slideId) {
-      var slideIndex = Array.from(document.querySelectorAll('.mySwiper .swiper-slide')).findIndex(slide => slide.id === slideId);
 
-      if (slideIndex !== -1) {
-        document.querySelector('.mySwiper').scrollIntoView({ behavior: 'smooth' });
+      document.querySelector(slideId).scrollIntoView({ behavior: 'smooth' });
 
-        swiper.slideTo(slideIndex);
-      }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -1117,7 +1114,7 @@
 
     }
 
-    document.querySelectorAll('.contact_method').forEach((el)=>{
+    document.querySelectorAll('.contact_method').forEach((el) => {
       new SlimSelect({
         select: el,
         settings: {
@@ -1126,7 +1123,7 @@
       })
     })
 
-    document.querySelectorAll('.contact_method_alter').forEach((el)=>{
+    document.querySelectorAll('.contact_method_alter').forEach((el) => {
       new SlimSelect({
         select: el,
         settings: {
@@ -1136,7 +1133,7 @@
     })
 
 
-  
+
 
   </script>
 
