@@ -1329,16 +1329,24 @@ footer .footer_logo img {
   margin-top: 40px;
 }
 .section_supply .logo-matrix-container {
+  position: relative;
   margin-top: 60px;
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 720px;
   overflow: visible;
 }
 .section_supply .logo-matrix-container .logo {
+  position: absolute;
   transition: transform 0.3s ease, filter 0.3s ease;
   transform-box: border-box;
   transform-origin: center;
   cursor: pointer;
+}
+.section_supply .logo-matrix-container .logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .section_supply .logo-matrix-container .logo-active {
   filter: blur(0);
@@ -1352,36 +1360,6 @@ footer .footer_logo img {
 }
 .section_supply .logo-matrix-container .logo:hover ~ .logo {
   filter: blur(4px);
-}
-.section_supply .logo-matrix-container .logo:nth-child(1) {
-  x: 2;
-  y: 26;
-  width: 188px;
-  height: 58px;
-}
-.section_supply .logo-matrix-container .logo:nth-child(2) {
-  y: 162;
-  x: 0;
-  width: 148px;
-  height: 35px;
-}
-.section_supply .logo-matrix-container .logo:nth-child(3) {
-  x: 845;
-  y: 175;
-  width: 209px;
-  height: 53px;
-}
-.section_supply .logo-matrix-container .logo:nth-child(4) {
-  x: 676;
-  y: 0;
-  width: 297px;
-  height: 84px;
-}
-.section_supply .logo-matrix-container .logo:nth-child(5) {
-  x: 236;
-  y: 162;
-  width: 127px;
-  height: 61px;
 }
 .section_supply .logo-matrix-container .logo:nth-child(6) {
   x: 2;
