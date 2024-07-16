@@ -5122,7 +5122,9 @@ class Landing {
       modalCallback,
       modalInfo,
       modalForm,
-      modalPersonalData
+      modalPersonalData,
+      modalOffer,
+      modalPolicy
     } = _ref;
     this.elements = {
       handContainer: document.querySelector('.' + handContainer),
@@ -5143,7 +5145,9 @@ class Landing {
       modalCallback: document.getElementById(modalCallback),
       modalInfo: document.getElementById(modalInfo),
       modalForm: document.getElementById(modalForm),
-      modalPersonalData: document.getElementById(modalPersonalData)
+      modalPersonalData: document.getElementById(modalPersonalData),
+      modalOffer: document.getElementById(modalOffer),
+      modalPolicy: document.getElementById(modalPolicy)
     };
     this.handResizeBlocks();
     this.handAnimation();
@@ -5442,7 +5446,9 @@ document.addEventListener('DOMContentLoaded', () => {
     modalCallback: "modalCallback",
     modalInfo: "modalInfo",
     modalForm: "modalForm",
-    modalPersonalData: "modalPersonalData"
+    modalPersonalData: "modalPersonalData",
+    modalOffer: "modalOffer",
+    modalPolicy: "modalPolicy"
   });
 });
 
