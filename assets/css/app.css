@@ -1350,16 +1350,10 @@ footer .footer_logo img {
 }
 .section_supply .logo-matrix-container .logo-active {
   filter: blur(0);
+  transform: scale(1.5);
 }
 .section_supply .logo-matrix-container .logo-blur {
   filter: blur(3px);
-}
-.section_supply .logo-matrix-container .logo:hover {
-  transform: scale(1.5);
-  filter: none;
-}
-.section_supply .logo-matrix-container .logo:hover ~ .logo {
-  filter: blur(4px);
 }
 .section_supply .logo-matrix-container .logo:nth-child(6) {
   x: 2;

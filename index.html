@@ -105,11 +105,16 @@
               <div class="card-desc font-400-14">От компонентов микроэлектроники до полнофункциональных систем</div>
 
               <div class="card-brands">
-                <div class="card-brands-slide"><img src="static/img/logo/siemens.png" onclick="goToSlide('#section_supply')" alt="Siemens"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/endress.png" onclick="goToSlide('#section_supply')" alt="Image 1"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/yokogawa.png" onclick="goToSlide('#section_supply')" alt="Yokogawa"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/honeywell.png" onclick="goToSlide('#section_supply')" alt="Honeywell"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/schneider.png" onclick="goToSlide('#section_supply')" alt="Image 1"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/siemens.png"
+                    onclick="goToSlide('#section_supply')" alt="Siemens"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/endress.png"
+                    onclick="goToSlide('#section_supply')" alt="Image 1"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/yokogawa.png"
+                    onclick="goToSlide('#section_supply')" alt="Yokogawa"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/honeywell.png"
+                    onclick="goToSlide('#section_supply')" alt="Honeywell"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/schneider.png"
+                    onclick="goToSlide('#section_supply')" alt="Image 1"></div>
 
                 <div class="card-brands-button-next" onclick="goToSlide('#section_supply')"></div>
               </div>
@@ -125,11 +130,16 @@
               <div class="card-title font-700-24">Серверно-сетевое оборудование</div>
               <div class="card-desc font-400-14">Серверы, СХД, ВКС маршрутизаторы и коммутаторы.</div>
               <div class="card-brands">
-                <div class="card-brands-slide"><img src="static/img/logo/dell.png" onclick="goToSlide('#section_supply')" alt="Dell"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/huawei.png" onclick="goToSlide('#section_supply')" alt="Huawei"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/lenovo.png" onclick="goToSlide('#section_supply')" alt="lenovo"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/adwantech.png" onclick="goToSlide('#section_supply')" alt="Advantech"></div>
-                <div class="card-brands-slide"><img src="static/img/logo/cisco.png" onclick="goToSlide('#section_supply')" alt="Cisco"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/dell.png"
+                    onclick="goToSlide('#section_supply')" alt="Dell"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/huawei.png"
+                    onclick="goToSlide('#section_supply')" alt="Huawei"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/lenovo.png"
+                    onclick="goToSlide('#section_supply')" alt="lenovo"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/adwantech.png"
+                    onclick="goToSlide('#section_supply')" alt="Advantech"></div>
+                <div class="card-brands-slide"><img src="static/img/logo/cisco.png"
+                    onclick="goToSlide('#section_supply')" alt="Cisco"></div>
                 <div class="card-brands-button-next" onclick="goToSlide('#section_supply')"></div>
               </div>
             </div>
@@ -684,7 +694,8 @@
       </div>
 
       <div class="grid-template">
-        <div class="font-400-12 js-openModalBtn button_personan_data" data-modal="modalPolicy">Политика конфиденциальности</div>
+        <div class="font-400-12 js-openModalBtn button_personan_data" data-modal="modalPolicy">Политика
+          конфиденциальности</div>
         <div class="font-400-12 js-openModalBtn button_personan_data" data-modal="modalOffer">Оферта</div>
         <div class="font-400-12">© 2011-2024 Industrial Module</div>
       </div>
@@ -838,7 +849,8 @@
         </div>
 
         <div class="input-container">
-          <input name="form_desc" type="text" id="form_desc" required placeholder="здесь Вы можете описать суть своей задачи">
+          <input name="form_desc" type="text" id="form_desc" required
+            placeholder="здесь Вы можете описать суть своей задачи">
           <label class="font-h5" for="form_desc">Опишите Вашу задачу</label>
 
           <span class="focus-border"></span>
@@ -939,7 +951,7 @@
           <span class="focus-border"></span>
         </div>
 
-     
+
 
 
 
@@ -1026,106 +1038,134 @@
 
 
   <script>
- 
 
 
-function hightlogocontainer() {
-  const container = document.querySelector('.logo-matrix-container');
-  const logos = document.querySelectorAll('.logo-matrix-container .logo');
 
-  let maxHeight = 0;
+    function hightlogocontainer() {
+      const container = document.querySelector('.logo-matrix-container');
+      const logos = document.querySelectorAll('.logo-matrix-container .logo');
 
-  logos.forEach(logo => {
-    const logoRect = logo.getBoundingClientRect();
-    const bottomPosition = logoRect.top + logoRect.height;
-    console.log(bottomPosition);
+      let maxHeight = 0;
 
-    if (bottomPosition > maxHeight) {
-      maxHeight = bottomPosition;
-    }
-  });
+      logos.forEach(logo => {
+        const logoRect = logo.getBoundingClientRect();
+        const bottomPosition = logoRect.top + logoRect.height;
 
-  container.style.height = `${maxHeight}px`;
-
-
-}
-function generatelogos() {
-  const logos = [
-  {src: 'static/img/logo/1.png', top: 26, left: 2, width: 188, height: 58},
-  {src: 'static/img/logo/5.png', top: 162, left: 0, width: 148, height: 35},
-  {src: 'static/img/logo/8.png', top: 175, left: 845, width: 209, height: 53},
-  {src: 'static/img/logo/3.png', top: 0, left: 676, width: 297, height: 84},
-  {src: 'static/img/logo/6.png', top: 162, left: 236, width: 127, height: 61},
-  {src: 'static/img/logo/10.png', top: 312, left: 2, width: 154, height: 48},
-  {src: 'static/img/logo/2.png', top: 14, left: 351, width: 167, height: 40},
-  {src: 'static/img/logo/4.png', top: 5, left: 1159, width: 113, height: 61},
-
-  {src: 'static/img/logo/14.png', top: 335, left: 1021, width: 261, height: 102},
-  {src: 'static/img/logo/11.png', top: 323, left: 232, width: 131, height: 27},
-  {src: 'static/img/logo/15.png', top: 428, left: 2, width: 197, height: 37},
-  {src: 'static/img/logo/9.png', top: 154, left: 1138, width: 144, height: 85},
-
-  {src: 'static/img/logo/13.png', top: 329, left: 701, width: 228, height: 31},
-  {src: 'static/img/logo/17.png', top: 437, left: 676, width: 168, height: 32},
-  {src: 'static/img/logo/18.png', top: 486, left: 897, width: 159, height: 50},
-
-  {src: 'static/img/logo/16.png', top: 418, left: 297, width: 221, height: 93},
-  {src: 'static/img/logo/12.png', top: 315, left: 483, width: 70, height: 41},
-  {src: 'static/img/logo/23.png', top: 521, left: 1138, width: 127, height: 56},
-
-  {src: 'static/img/logo/22.png', top: 584, left: 798, width: 275, height: 32},
-  {src: 'static/img/logo/19.png', top: 576, left: 2, width: 267, height: 37},
-  {src: 'static/img/logo/20.png', top: 566, left: 358, width: 198, height: 36},
-  {src: 'static/img/logo/21.png', top: 539, left: 642, width: 117, height: 34},
-  {src: 'static/img/logo/7.png', top: 154, left: 456, width: 310, height: 94},
-];
-
-const container = document.querySelector('.logo-matrix-container');
-
-logos.forEach(logo => {
-  const item = document.createElement('div');
-  item.className = 'logo';
-  item.style.top = `${logo.top}px`;
-  item.style.left = `${logo.left}px`;
-  item.style.width = `${logo.width}px`;
-  item.style.height = `${logo.height}px`;
-  const img = document.createElement('img');
-  img.src = logo.src;
-  img.alt = `Logo ${logo.src}`;
-  item.appendChild(img);
-  container.appendChild(item);
-});
-
-}
-
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  generatelogos();
-  const logos = document.querySelectorAll('.logo-matrix-container .logo>img');
-  let imagesLoaded = 0;
-
-    logos.forEach(logo => {
-    if (logo.complete) {
-
-      imagesLoaded++;
-      if (imagesLoaded === logos.length) {
-        hightlogocontainer();
-      }
-    } else {
-      logo.addEventListener('load', () => {
-        imagesLoaded++;
-        if (imagesLoaded === logos.length) {
-          hightlogocontainer();
+        if (bottomPosition > maxHeight) {
+          maxHeight = bottomPosition;
         }
       });
+
+      container.style.height = `${maxHeight}px`;
+
+
     }
-  });
+    function generatelogos() {
+      const logos = [
+        { src: 'static/img/logo/1.png', top: 26, left: 2, width: 188, height: 58 },
+        { src: 'static/img/logo/5.png', top: 162, left: 0, width: 148, height: 35 },
+        { src: 'static/img/logo/8.png', top: 175, left: 845, width: 209, height: 53 },
+        { src: 'static/img/logo/3.png', top: 0, left: 676, width: 297, height: 84 },
+        { src: 'static/img/logo/6.png', top: 162, left: 236, width: 127, height: 61 },
+        { src: 'static/img/logo/10.png', top: 312, left: 2, width: 154, height: 48 },
+        { src: 'static/img/logo/2.png', top: 14, left: 351, width: 167, height: 40 },
+        { src: 'static/img/logo/4.png', top: 5, left: 1159, width: 113, height: 61 },
+
+        { src: 'static/img/logo/14.png', top: 335, left: 1021, width: 261, height: 102 },
+        { src: 'static/img/logo/11.png', top: 323, left: 232, width: 131, height: 27 },
+        { src: 'static/img/logo/15.png', top: 428, left: 2, width: 197, height: 37 },
+        { src: 'static/img/logo/9.png', top: 154, left: 1138, width: 144, height: 85 },
+
+        { src: 'static/img/logo/13.png', top: 329, left: 701, width: 228, height: 31 },
+        { src: 'static/img/logo/17.png', top: 437, left: 676, width: 168, height: 32 },
+        { src: 'static/img/logo/18.png', top: 486, left: 897, width: 159, height: 50 },
+
+        { src: 'static/img/logo/16.png', top: 418, left: 297, width: 221, height: 93 },
+        { src: 'static/img/logo/12.png', top: 315, left: 483, width: 70, height: 41 },
+        { src: 'static/img/logo/23.png', top: 521, left: 1138, width: 127, height: 56 },
+
+        { src: 'static/img/logo/22.png', top: 584, left: 798, width: 275, height: 32 },
+        { src: 'static/img/logo/19.png', top: 576, left: 2, width: 267, height: 37 },
+        { src: 'static/img/logo/20.png', top: 566, left: 358, width: 198, height: 36 },
+        { src: 'static/img/logo/21.png', top: 539, left: 642, width: 117, height: 34 },
+        { src: 'static/img/logo/7.png', top: 154, left: 456, width: 310, height: 94 },
+      ];
+
+      const container = document.querySelector('.logo-matrix-container');
+
+      logos.forEach(logo => {
+        const item = document.createElement('div');
+        item.className = 'logo';
+        item.style.top = `${logo.top}px`;
+        item.style.left = `${logo.left}px`;
+        item.style.width = `${logo.width}px`;
+        item.style.height = `${logo.height}px`;
+        const img = document.createElement('img');
+        img.src = logo.src;
+        img.alt = `Logo ${logo.src}`;
+        item.appendChild(img);
+        container.appendChild(item);
+      });
+
+    }
 
 
-    
+    document.addEventListener("DOMContentLoaded", () => {
 
-});
+      generatelogos();
+      setTimeout(()=>{
+      
+      
+      const logos = document.querySelectorAll('.logo-matrix-container .logo>img');
+
+      const imagesCont = document.querySelectorAll('.logo-matrix-container .logo');
+
+
+      let imagesLoaded = 0;
+
+      logos.forEach(logo => {
+        if (logo.complete) {
+
+          imagesLoaded++;
+          if (imagesLoaded === logos.length) {
+            hightlogocontainer();
+          }
+        } else {
+          logo.addEventListener('load', () => {
+            imagesLoaded++;
+            if (imagesLoaded === logos.length) {
+              hightlogocontainer();
+            }
+          });
+        }
+      });
+
+      imagesCont.forEach(image => {
+
+        image.addEventListener('mouseenter', function () {
+
+          image.classList.add('logo-active');
+
+          imagesCont.forEach(otherImage => {
+            if (otherImage !== image) {
+              otherImage.classList.add('logo-blur');
+            }
+          });
+        });
+
+
+        image.addEventListener('mouseleave', function () {
+
+          imagesCont.forEach(otherImage => {
+            otherImage.classList.remove('logo-active', 'logo-blur');
+          });
+        });
+      });
+
+
+
+    },2000)
+    });
 
     function setViewBox(x, y, width, height) {
       const svgElement = document.getElementById('js-svg-logo');
@@ -1192,38 +1232,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-
-      const images = document.querySelectorAll('.logo-matrix-container .logo');
-
-      images.forEach(image => {
-
-
-      
-        image.addEventListener('mouseenter', function () {
-          
-          image.classList.add('logo-active');
-          
-          images.forEach(otherImage => {
-            if (otherImage !== image) {
-              otherImage.classList.add('logo-blur');
-            }
-          });
-        });
-
-        
-        image.addEventListener('mouseleave', function () {
-         
-          images.forEach(otherImage => {
-            otherImage.classList.remove('logo-active', 'logo-blur');
-          });
-        });
-      });
-
-
-
-
-    });
 
 
     document.querySelectorAll('.contact_method').forEach((el) => {
