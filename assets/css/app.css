@@ -1032,14 +1032,13 @@ footer .footer_logo img {
   flex-wrap: wrap;
   justify-content: start;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   row-gap: 3px;
   margin-top: 4px;
 }
 .reserse-card .back .brandlist img {
-  max-width: 90px;
-  max-height: 50px;
   opacity: 0.4;
+  height: auto;
   cursor: pointer;
 }
 .reserse-card .back .brandlist img:hover {
