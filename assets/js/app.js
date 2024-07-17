@@ -5149,6 +5149,16 @@ class Landing {
       modalOffer: document.getElementById(modalOffer),
       modalPolicy: document.getElementById(modalPolicy)
     };
+    this.selectsSelector = document.querySelectorAll('.contact_method'), this.selects = [];
+    this.selectsSelector.forEach(select => {
+      let el = new SlimSelect({
+        select: select,
+        settings: {
+          showSearch: false
+        }
+      });
+      this.selects.push(el);
+    });
 
     //this.handResizeBlocks();
     this.handAnimation();
@@ -5173,6 +5183,36 @@ class Landing {
     const {
       bodyContainer
     } = this.elements;
+    const inputs = modal.querySelectorAll('input');
+    const inputsEmail = modal.querySelectorAll('.email_container');
+    const inputsPhone = modal.querySelectorAll('.phone_container');
+    const inputsAnother = modal.querySelectorAll('.another_container');
+    inputsEmail.forEach(input => {
+      if (!input.classList.contains('input_hidden')) {
+        input.classList.add("input_hidden");
+      }
+    });
+    inputsPhone.forEach(input => {
+      if (!input.classList.contains('input_hidden')) {
+        input.classList.add("input_hidden");
+      }
+    });
+    inputsAnother.forEach(input => {
+      if (!input.classList.contains('input_hidden')) {
+        input.classList.add("input_hidden");
+      }
+    });
+    inputs.forEach(input => {
+      input.value = '';
+    });
+    //phone_container email_container another_container
+    this.selects.forEach(select => {
+      select.setSelected('');
+    });
+    // selects.forEach((select)=>{
+    //     select.value = '';
+    // });
+
     if (modal) {
       modal.style.display = 'none';
       bodyContainer.style.overflow = "auto";
@@ -5248,7 +5288,6 @@ class Landing {
       ...models
     } = this.modals;
     const currentModal = event.target.closest('.modal').id;
-    console.log(currentModal);
     this.closeModal(models[currentModal]);
   }
   handlerClickOutbounceModal(event) {
@@ -5257,7 +5296,7 @@ class Landing {
     } = this.modals;
     for (let model in models) {
       if (event.target == models[model]) {
-        this.toggleModal(models[model]);
+        this.closeModal(models[model]);
         return;
       }
     }
@@ -5356,9 +5395,6 @@ class Landing {
       btn.addEventListener('click', this.handlerCloseModal.bind(this));
     });
     window.addEventListener('click', this.handlerClickOutbounceModal.bind(this));
-
-    //window.addEventListener('resize', this.handResizeBlocks.bind(this));
-
     window.addEventListener('scroll', this.handlerHighlightCurrentSection.bind(this));
     window.addEventListener('resize', this.handlerStickMenu.bind(this));
     window.addEventListener('scroll', this.handlerStickMenu.bind(this));

@@ -516,43 +516,51 @@ section .container {
 
 .bg_center {
   position: absolute;
-  background-image: url(../../10fd66091f7491fe0283.webp);
-  background-position: center;
-  background-size: contain;
-  width: 1950px;
-  height: 1950px;
+  background-color: rgba(19, 134, 229, 0.8);
+  width: 828px;
+  height: 828px;
+  border-radius: 828px;
+  filter: blur(220px);
   z-index: -2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.bg-hand-blur::before {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  background-color: rgba(19, 134, 229, 0.8);
+  width: 828px;
+  height: 828px;
+  border-radius: 828px;
+  filter: blur(220px);
+  right: 0px;
+  top: 0px;
+  opacity: 0.3;
+}
+
 .bg_left-blur::before {
   content: "";
   position: absolute;
-  background-image: url(../../10fd66091f7491fe0283.webp);
-  background-position: center;
-  background-size: contain;
-  width: 1950px;
-  height: 1950px;
   z-index: -2;
-  left: 30%;
-  top: 70%;
-  transform: translate(-50%, -50%);
+  background-color: rgba(19, 134, 229, 0.8);
+  width: 828px;
+  height: 828px;
+  border-radius: 828px;
+  filter: blur(220px);
 }
 
 .bg_right-blur::before {
   content: "";
   position: absolute;
-  background-image: url(../../10fd66091f7491fe0283.webp);
-  background-position: center;
-  background-size: contain;
-  width: 1950px;
-  height: 1950px;
   z-index: -3;
-  left: 70%;
-  top: 30%;
-  transform: translate(-50%, -50%);
+  background-color: rgba(19, 134, 229, 0.8);
+  width: 828px;
+  height: 828px;
+  border-radius: 828px;
+  filter: blur(220px);
 }
 
 #main__banner .bg_left {
@@ -1824,6 +1832,7 @@ footer .footer_logo img {
   display: none; /* Скрыть модальное окно по умолчанию */
   position: fixed; /* Оставить модальное окно на месте */
   z-index: 50; /* Слой на переднем плане */
+  padding: 50px;
   left: 0;
   top: 0;
   width: 100%; /* Полная ширина */
@@ -1871,12 +1880,19 @@ footer .footer_logo img {
   margin-top: 35px;
 }
 .modal-content__info {
+  margin-top: 50px;
+  margin-bottom: 50px;
   max-width: 719px;
   padding: 50px;
 }
 .modal-content__callback {
   max-width: 465px;
-  padding: 60px;
+  padding: 54px;
+}
+
+#modalPersonalData .modal-content {
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .close {
@@ -2032,6 +2048,12 @@ select.contact_method {
 .section_callback_form .ss-content {
   background: rgb(66, 68, 77);
   color: white;
+}
+
+.phones__number a, .info__email a {
+  color: white;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
