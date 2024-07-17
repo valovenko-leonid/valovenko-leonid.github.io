@@ -515,6 +515,19 @@ section .container {
   z-index: -1;
 }
 
+.bg_center {
+  position: absolute;
+  background-color: rgba(19, 134, 229, 0.8);
+  border-radius: 828px;
+  width: 828px;
+  height: 828px;
+  filter: blur(561px);
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .bg_left-blur::before {
   content: "";
   position: absolute;
