@@ -5268,7 +5268,6 @@ class Landing {
       menuStick
     } = this.elements;
     const rectContainer = container.getBoundingClientRect();
-    const rectMenuStick = menuStick.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const initialOffsetTop = 140;
     if (scrollTop >= initialOffsetTop) {
@@ -5276,7 +5275,7 @@ class Landing {
     } else {
       menuStick.classList.remove('fixed');
     }
-    const distanceFromRight = window.innerWidth - rectContainer.right - 100;
+    const distanceFromRight = window.innerWidth - rectContainer.right - 116;
     menuStick.style.right = distanceFromRight + 'px';
   }
   handlerAddSmoothScroll(btn, event) {
@@ -5410,8 +5409,9 @@ class Landing {
     window.addEventListener('click', this.handlerClickOutbounceModal.bind(this));
 
     //window.addEventListener('resize', this.handResizeBlocks.bind(this));
-    window.addEventListener('resize', this.handlerStickMenu.bind(this));
+
     window.addEventListener('scroll', this.handlerHighlightCurrentSection.bind(this));
+    window.addEventListener('resize', this.handlerStickMenu.bind(this));
     window.addEventListener('scroll', this.handlerStickMenu.bind(this));
     if (stickyMenuLink) {
       stickyMenuLink.forEach(btn => {

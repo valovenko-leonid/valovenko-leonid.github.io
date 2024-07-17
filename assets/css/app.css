@@ -512,16 +512,15 @@ section .container {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  z-index: -1;
 }
 
 .bg_center {
   position: absolute;
-  background-color: rgba(19, 134, 229, 0.8);
-  border-radius: 828px;
-  width: 828px;
-  height: 828px;
-  filter: blur(561px);
+  background-image: url(../../10fd66091f7491fe0283.webp);
+  background-position: center;
+  background-size: contain;
+  width: 1950px;
+  height: 1950px;
   z-index: -2;
   top: 50%;
   left: 50%;
@@ -531,27 +530,29 @@ section .container {
 .bg_left-blur::before {
   content: "";
   position: absolute;
-  background-color: rgba(19, 134, 229, 0.8);
-  border-radius: 828px;
-  width: 828px;
-  height: 828px;
-  filter: blur(561px);
+  background-image: url(../../10fd66091f7491fe0283.webp);
+  background-position: center;
+  background-size: contain;
+  width: 1950px;
+  height: 1950px;
   z-index: -2;
-  right: 0px;
-  bottom: 0px;
+  left: 30%;
+  top: 70%;
+  transform: translate(-50%, -50%);
 }
 
 .bg_right-blur::before {
   content: "";
   position: absolute;
-  background-color: rgba(19, 134, 229, 0.8);
-  border-radius: 828px;
-  width: 828px;
-  height: 828px;
-  filter: blur(561px);
-  z-index: -2;
-  left: 0px;
-  bottom: 0px;
+  background-image: url(../../10fd66091f7491fe0283.webp);
+  background-position: center;
+  background-size: contain;
+  width: 1950px;
+  height: 1950px;
+  z-index: -3;
+  left: 70%;
+  top: 30%;
+  transform: translate(-50%, -50%);
 }
 
 #main__banner .bg_left {
@@ -1075,7 +1076,6 @@ footer .footer_logo img {
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  width: 200px;
   z-index: 20;
   color: rgba(255, 255, 255, 0.2);
   text-transform: uppercase;
@@ -1100,6 +1100,7 @@ footer .footer_logo img {
   width: 12px;
   height: 5px;
   border-radius: 15px;
+  box-sizing: border-box;
   transition: 0.12s;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -1265,7 +1266,7 @@ footer .footer_logo img {
   display: flex;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 940px) {
   .desctop_only,
   .item.desctop_only,
   .desctop_only:last-child {
@@ -2006,11 +2007,25 @@ select.contact_method {
 .container {
   width: 1310px;
   margin: 0 auto;
-  max-width: 100%;
   padding: 0px 15px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1426px) {
+  .container {
+    width: 1140px;
+  }
+}
+@media (max-width: 1360px) {
+  .container {
+    width: 960px;
+  }
+}
+@media (max-width: 1183px) {
+  .container {
+    width: 720px;
+  }
+}
+@media (max-width: 940px) {
   .container {
     width: 100%;
   }

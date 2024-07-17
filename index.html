@@ -421,13 +421,68 @@
               <label for="name">Как к Вам обращаться?</label>
               <span class="focus-border"></span>
             </div>
+
             <div class="input-container">
-              <input id="callback_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__" required>
-              <label for="callback_phone">Телефон</label>
+              <select class="contact_method" required>
+                <option value="" disabled selected>Как с Вами связаться?</option>
+                <option value="email">E-mail</option>
+                <option value="phone">Телефон</option>
+                <option value="another">Иной способ</option>
+              </select>
               <span class="focus-border"></span>
-
-
+    
             </div>
+    
+    
+            <div class="input-container input_hidden callback_phone_container">
+              <input name="callback_phone" id="callback_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__"
+                required>
+              <label class="font-h5" for="callback_phone">Введите номер телефона</label>
+              <span class="focus-border"></span>
+            </div>
+    
+            <div class="input-container input_hidden callback_email_container">
+              <input name="callback_email" type="email" id="callback_email" placeholder=" " required>
+              <label class="font-h5" for="callback_email">Введите email</label>
+              <span class="focus-border"></span>
+            </div>
+    
+            <div class="input-container input_hidden callback_another_container">
+              <input name="callback_another" type="email" id="callback_another" placeholder=" " required>
+              <label class="font-h5" for="callback_another">Введите иной способ</label>
+              <span class="focus-border"></span>
+            </div>
+    
+            <div class="input-container">
+              <select class="contact_method_alter" required>
+                <option value="" disabled selected>Альтернативный способ связи</option>
+                <option value="email_alter">E-mail</option>
+                <option value="phone_alter">Телефон</option>
+                <option value="another_alter">Иной способ</option>
+              </select>
+              <span class="focus-border"></span>
+            </div>
+    
+            <div class="input-container input_hidden callback_phone_alter_container">
+              <input name="callback_phone_alter" id="callback_phone_alter" type="text" autocomplete="tel"
+                placeholder="+7 (___) ___-__-__" required>
+              <label class="font-h5" for="callback_phone_alter">Введите номер телефона</label>
+              <span class="focus-border"></span>
+            </div>
+    
+            <div class="input-container input_hidden callback_email_alter_container">
+              <input name="callback_email_alter" type="email" id="callback_email_alter" placeholder=" " required>
+              <label class="font-h5" for="callback_email_alter">Введите email</label>
+              <span class="focus-border"></span>
+            </div>
+    
+            <div class="input-container input_hidden callback_another_alter_container">
+              <input name="callback_another_alter" type="email" id="callback_another_alter" placeholder=" " required>
+              <label class="font-h5" for="callback_another_alter">Введите иной способ</label>
+              <span class="focus-border"></span>
+            </div>
+    
+
             <div class="input-container">
               <input type="text" id="callback_desc" required placeholder="здесь Вы можете описать суть своей задачи">
               <label class="font-h5" for="callback_desc">Опишите Вашу задачу</label>
@@ -1103,61 +1158,11 @@
 
 
     }
-    function generatelogos() {
-      const logos = [
-        { src: 'static/img/logo/1.png', top: 26, left: 2, width: 188, height: 58 },
-        { src: 'static/img/logo/5.png', top: 162, left: 0, width: 148, height: 35 },
-        { src: 'static/img/logo/8.png', top: 175, left: 845, width: 209, height: 53 },
-        { src: 'static/img/logo/3.png', top: 0, left: 676, width: 297, height: 84 },
-        { src: 'static/img/logo/6.png', top: 162, left: 236, width: 127, height: 61 },
-        { src: 'static/img/logo/10.png', top: 312, left: 2, width: 154, height: 48 },
-        { src: 'static/img/logo/2.png', top: 14, left: 351, width: 167, height: 40 },
-        { src: 'static/img/logo/4.png', top: 5, left: 1159, width: 113, height: 61 },
-
-        { src: 'static/img/logo/14.png', top: 335, left: 1021, width: 261, height: 102 },
-        { src: 'static/img/logo/11.png', top: 323, left: 232, width: 131, height: 27 },
-        { src: 'static/img/logo/15.png', top: 428, left: 2, width: 197, height: 37 },
-        { src: 'static/img/logo/9.png', top: 154, left: 1138, width: 144, height: 85 },
-
-        { src: 'static/img/logo/13.png', top: 329, left: 701, width: 228, height: 31 },
-        { src: 'static/img/logo/17.png', top: 437, left: 676, width: 168, height: 32 },
-        { src: 'static/img/logo/18.png', top: 486, left: 897, width: 159, height: 50 },
-
-        { src: 'static/img/logo/16.png', top: 418, left: 297, width: 221, height: 93 },
-        { src: 'static/img/logo/12.png', top: 315, left: 483, width: 70, height: 41 },
-        { src: 'static/img/logo/23.png', top: 521, left: 1138, width: 127, height: 56 },
-
-        { src: 'static/img/logo/22.png', top: 584, left: 798, width: 275, height: 32 },
-        { src: 'static/img/logo/19.png', top: 576, left: 2, width: 267, height: 37 },
-        { src: 'static/img/logo/20.png', top: 566, left: 358, width: 198, height: 36 },
-        { src: 'static/img/logo/21.png', top: 539, left: 642, width: 117, height: 34 },
-        { src: 'static/img/logo/7.png', top: 154, left: 456, width: 310, height: 94 },
-      ];
-
-      const container = document.querySelector('.logo-matrix-container');
-
-      logos.forEach(logo => {
-        const item = document.createElement('div');
-        item.className = 'logo';
-        item.style.top = `${logo.top}px`;
-        item.style.left = `${logo.left}px`;
-        item.style.width = `${logo.width}px`;
-        item.style.height = `${logo.height}px`;
-        const img = document.createElement('img');
-        img.src = logo.src;
-        img.alt = `Logo ${logo.src}`;
-        item.appendChild(img);
-        container.appendChild(item);
-      });
-
-    }
 
 
     document.addEventListener("DOMContentLoaded", () => {
 
-      //generatelogos();
     
-
 
         const logos = document.querySelectorAll('.logo-matrix-container .logo>img');
 
@@ -1266,7 +1271,7 @@
 
     function goToSlide(slideId) {
 
-      document.querySelector(slideId).scrollIntoView({ behavior: 'smooth' });
+      document.querySelector(slideId).scrollIntoView({ behavior: 'auto' });
 
     }
 
