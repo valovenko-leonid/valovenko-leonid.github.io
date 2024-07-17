@@ -5149,7 +5149,8 @@ class Landing {
       modalOffer: document.getElementById(modalOffer),
       modalPolicy: document.getElementById(modalPolicy)
     };
-    this.handResizeBlocks();
+
+    //this.handResizeBlocks();
     this.handAnimation();
     this.attachEventListeners();
     this.handlerStickMenu();
@@ -5246,9 +5247,9 @@ class Landing {
     const {
       ...models
     } = this.modals;
-    for (let model in models) {
-      this.closeModal(models[model]);
-    }
+    const currentModal = event.target.closest('.modal').id;
+    console.log(currentModal);
+    this.closeModal(models[currentModal]);
   }
   handlerClickOutbounceModal(event) {
     const {
@@ -5407,7 +5408,8 @@ class Landing {
       btn.addEventListener('click', this.handlerCloseModal.bind(this));
     });
     window.addEventListener('click', this.handlerClickOutbounceModal.bind(this));
-    window.addEventListener('resize', this.handResizeBlocks.bind(this));
+
+    //window.addEventListener('resize', this.handResizeBlocks.bind(this));
     window.addEventListener('resize', this.handlerStickMenu.bind(this));
     window.addEventListener('scroll', this.handlerHighlightCurrentSection.bind(this));
     window.addEventListener('scroll', this.handlerStickMenu.bind(this));
