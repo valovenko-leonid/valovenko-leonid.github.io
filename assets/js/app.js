@@ -5290,78 +5290,27 @@ class Landing {
       }
     }
   }
-  handlerChangeAlterContact(e) {
-    const phoneContainer = document.querySelectorAll('.form_phone_alter_container');
-    const emailContainer = document.querySelectorAll('.form_email_alter_container');
-    const anotherContainer = document.querySelectorAll('.form_another_alter_container');
-    console.log(e);
-    if (e.target.value === 'phone_alter') {
-      phoneContainer.forEach(phoneCont => {
-        phoneCont.classList.remove('input_hidden');
-      });
-      anotherContainer.forEach(anotherCont => {
-        anotherCont.classList.add('input_hidden');
-      });
-      emailContainer.forEach(emainCont => {
-        emainCont.classList.add('input_hidden');
-      });
-    } else if (e.target.value === 'email_alter') {
-      emailContainer.forEach(emainCont => {
-        emainCont.classList.remove('input_hidden');
-      });
-      anotherContainer.forEach(anotherCont => {
-        anotherCont.classList.add('input_hidden');
-      });
-      phoneContainer.forEach(phoneCont => {
-        phoneCont.classList.add('input_hidden');
-      });
-    } else if (e.target.value === 'another_alter') {
-      anotherContainer.forEach(anotherCont => {
-        anotherCont.classList.remove('input_hidden');
-      });
-      emailContainer.forEach(emainCont => {
-        emainCont.classList.add('input_hidden');
-      });
-      phoneContainer.forEach(phoneCont => {
-        phoneCont.classList.add('input_hidden');
-      });
-    }
-  }
   handlerChangeContact(e) {
-    const phoneContainer = document.querySelectorAll('.form_phone_container');
-    const emailContainer = document.querySelectorAll('.form_email_container');
-    const anotherContainer = document.querySelectorAll('.form_another_container');
-    console.log(e);
+    const form = e.target.closest('form');
+    const codeField = e.target.dataset.code;
+    console.log(codeField);
+    console.log(e.target.value);
+    const phoneContainer = form.querySelector('.phone_container[data-code=' + codeField + ']');
+    const emailContainer = form.querySelector('.email_container[data-code=' + codeField + ']');
+    const anotherContainer = form.querySelector('.another_container[data-code=' + codeField + ']');
+    console.log(emailContainer);
     if (e.target.value === 'phone') {
-      phoneContainer.forEach(phoneCont => {
-        phoneCont.classList.remove('input_hidden');
-      });
-      anotherContainer.forEach(anotherCont => {
-        anotherCont.classList.add('input_hidden');
-      });
-      emailContainer.forEach(emainCont => {
-        emainCont.classList.add('input_hidden');
-      });
+      phoneContainer.classList.remove('input_hidden');
+      anotherContainer.classList.add('input_hidden');
+      emailContainer.classList.add('input_hidden');
     } else if (e.target.value === 'email') {
-      emailContainer.forEach(emainCont => {
-        emainCont.classList.remove('input_hidden');
-      });
-      anotherContainer.forEach(anotherCont => {
-        anotherCont.classList.add('input_hidden');
-      });
-      phoneContainer.forEach(phoneCont => {
-        phoneCont.classList.add('input_hidden');
-      });
+      emailContainer.classList.remove('input_hidden');
+      anotherContainer.classList.add('input_hidden');
+      phoneContainer.classList.add('input_hidden');
     } else if (e.target.value === 'another') {
-      anotherContainer.forEach(anotherCont => {
-        anotherCont.classList.remove('input_hidden');
-      });
-      emailContainer.forEach(emainCont => {
-        emainCont.classList.add('input_hidden');
-      });
-      phoneContainer.forEach(phoneCont => {
-        phoneCont.classList.add('input_hidden');
-      });
+      anotherContainer.classList.remove('input_hidden');
+      emailContainer.classList.add('input_hidden');
+      phoneContainer.classList.add('input_hidden');
     }
   }
   handlerHighlightCurrentSection() {
@@ -5421,12 +5370,8 @@ class Landing {
       });
     }
     const contactMethod = document.querySelectorAll('.contact_method');
-    const contactAlterMethod = document.querySelectorAll('.contact_method_alter');
     contactMethod.forEach(contMethod => {
       contMethod.addEventListener('change', this.handlerChangeContact.bind(this));
-    });
-    contactAlterMethod.forEach(contMethod => {
-      contMethod.addEventListener('change', this.handlerChangeAlterContact.bind(this));
     });
   }
 }
