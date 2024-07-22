@@ -2357,7 +2357,7 @@ select.contact_method {
   }
   #supplyLogo_23 {
     top: 30.54%;
-    left: 80.73;
+    left: 80.72%;
     width: 16.5%;
     height: 5.08%;
   }
@@ -2405,38 +2405,38 @@ select.contact_method {
   }
   #supplyLogo_9 {
     top: 71%;
-    left: 42.86%;
+    left: 42.9%;
     width: 11.56%;
     height: 4.76%;
   }
   #supplyLogo_3 {
     top: 69.3%;
-    left: 52.73%;
-    width: 23.17%;
+    left: 61.45%;
+    width: 38.59%;
     height: 7.62%;
   }
   #supplyLogo_14 {
     top: 84.97%;
-    left: 79.64%;
-    width: 20.36%;
+    left: 0.22%;
+    width: 24.71%;
     height: 6.74%;
   }
   #supplyLogo_13 {
     top: 85.44%;
-    left: 54.68%;
-    width: 17.78%;
+    left: 34.01%;
+    width: 29.63%;
     height: 2.81%;
   }
   #supplyLogo_18 {
     top: 84.65%;
-    left: 69.97%;
-    width: 12.4%;
+    left: 74.83%;
+    width: 20.66%;
     height: 4.53%;
   }
   #supplyLogo_8 {
     top: 95.25%;
-    left: 65.91%;
-    width: 16.3%;
+    left: 66.44%;
+    width: 27.16%;
     height: 4.81%;
   }
 }
@@ -2760,6 +2760,26 @@ select.contact_method {
   }
 }
 @media (max-width: 660px) {
+  .maskot_frame .maskot_text {
+    left: calc(100% - 20px);
+  }
+  .maskot_frame .maskot_text::after {
+    transform-origin: center;
+    transform: scale(0.8);
+    right: calc(100% - 40px);
+  }
+  header .grid-template {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  #main__banner .banner__text_font:nth-child(1) {
+    font-size: 38px;
+  }
+  #main__banner .banner__text_font:nth-child(2) {
+    font-size: 28px;
+  }
+  #main__banner .banner__text_font:nth-child(3) {
+    font-size: 23px;
+  }
   #main__banner .hand-img-bg {
     left: 0px;
   }

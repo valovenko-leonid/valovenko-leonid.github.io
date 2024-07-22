@@ -5418,8 +5418,13 @@ class Landing {
       burgerMenuBtnExit,
       btnOpenModal,
       btnCloseModal,
-      btnSend
+      btnSend,
+      popupMenu
     } = this.elements;
+    const menuItemsMobile = popupMenu.querySelectorAll(".grid-template .item");
+    menuItemsMobile.forEach(item => {
+      item.addEventListener('click', this.handCloseMenu.bind(this));
+    });
     btnSend.forEach(btn => {
       btn.addEventListener('click', this.sendForm.bind(this));
     });
