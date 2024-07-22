@@ -17,11 +17,15 @@
     rel="stylesheet">
   <link rel="icon" type="image/png" sizes="16x16" href="static/misc/favicon.png">
 
-  <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+  <!-- <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script> -->
   <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
   </link>
 
-<link rel="icon" href="favicon.jpeg"><script defer src="assets/js/app.js"></script><link href="assets/css/app.css" rel="stylesheet"></head>
+<link rel="icon" href="favicon.jpeg">
+<!-- <script defer src="assets/js/app.js"></script> -->
+<link href="assets/css/app.css" rel="stylesheet">
+
+</head>
 
 <body>
   <header>
@@ -1159,117 +1163,117 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 
 
   <script>
 
 
 
-    function hightlogocontainer() {
-      const container = document.querySelector('.logo-matrix-container');
-      const logos = document.querySelectorAll('.logo-matrix-container .logo');
+    // function hightlogocontainer() {
+    //   const container = document.querySelector('.logo-matrix-container');
+    //   const logos = document.querySelectorAll('.logo-matrix-container .logo');
 
-      let maxHeight = 0;
-      let current = null;
+    //   let maxHeight = 0;
+    //   let current = null;
 
-      logos.forEach(logo => {
-        const logoRect = logo.getBoundingClientRect();
-        const bottomPosition = logoRect.top + logoRect.height;
+    //   logos.forEach(logo => {
+    //     const logoRect = logo.getBoundingClientRect();
+    //     const bottomPosition = logoRect.top + logoRect.height;
 
-        if (bottomPosition > maxHeight) {
-          maxHeight = bottomPosition;
+    //     if (bottomPosition > maxHeight) {
+    //       maxHeight = bottomPosition;
 
-          current = logo;
-        }
-      });
-      console.log(current);
-      container.style.height = `${maxHeight}px`;
+    //       current = logo;
+    //     }
+    //   });
+    //   console.log(current);
+    //   container.style.height = `${maxHeight}px`;
 
-    }
+    // }
 
 
-    document.addEventListener("DOMContentLoaded", () => {
+    // document.addEventListener("DOMContentLoaded", () => {
 
      
-      const logos = document.querySelectorAll('.logo-matrix-container .logo>img');
-      const imagesCont = document.querySelectorAll('.logo-matrix-container .logo');
+    //   const logos = document.querySelectorAll('.logo-matrix-container .logo>img');
+    //   const imagesCont = document.querySelectorAll('.logo-matrix-container .logo');
 
-      let imagesLoaded = 0;
+    //   let imagesLoaded = 0;
 
-      logos.forEach(logo => {
-        if (logo.complete) {
+    //   logos.forEach(logo => {
+    //     if (logo.complete) {
 
-          imagesLoaded++;
-          if (imagesLoaded === logos.length) {
-            hightlogocontainer();
-          }
-        } else {
-          logo.addEventListener('load', () => {
-            imagesLoaded++;
-            if (imagesLoaded === logos.length) {
-              hightlogocontainer();
-            }
-          });
-        }
-      });
+    //       imagesLoaded++;
+    //       if (imagesLoaded === logos.length) {
+    //         hightlogocontainer();
+    //       }
+    //     } else {
+    //       logo.addEventListener('load', () => {
+    //         imagesLoaded++;
+    //         if (imagesLoaded === logos.length) {
+    //           hightlogocontainer();
+    //         }
+    //       });
+    //     }
+    //   });
 
-      imagesCont.forEach(image => {
+    //   imagesCont.forEach(image => {
 
-        image.addEventListener('mouseenter', function () {
+    //     image.addEventListener('mouseenter', function () {
 
-          image.classList.add('logo-active');
+    //       image.classList.add('logo-active');
 
-          imagesCont.forEach(otherImage => {
-            if (otherImage !== image) {
-              otherImage.classList.add('logo-blur');
-            }
-          });
-        });
-
-
-        image.addEventListener('mouseleave', function () {
-
-          imagesCont.forEach(otherImage => {
-            otherImage.classList.remove('logo-active', 'logo-blur');
-          });
-        });
-      });
+    //       imagesCont.forEach(otherImage => {
+    //         if (otherImage !== image) {
+    //           otherImage.classList.add('logo-blur');
+    //         }
+    //       });
+    //     });
 
 
+    //     image.addEventListener('mouseleave', function () {
+
+    //       imagesCont.forEach(otherImage => {
+    //         otherImage.classList.remove('logo-active', 'logo-blur');
+    //       });
+    //     });
+    //   });
 
 
-    });
 
 
-    // Пример изменения viewBox
+    // });
 
-    function initSwiper() {
-      var windowWidth = window.innerWidth;
 
-      console.log(windowWidth);
-      if (windowWidth <= 1400) {
-        swiper = new Swiper('.mySwiper', {
-          direction: 'horizontal',
-          autoHeight: "auto",
-          spaceBetween: 100,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      } else {
-        swiper = new Swiper('.mySwiper', {
-          direction: 'vertical',
-          autoHeight: "auto",
-          spaceBetween: 100,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-        });
-      }
-    }
+    // // Пример изменения viewBox
+
+    // function initSwiper() {
+    //   var windowWidth = window.innerWidth;
+
+    //   console.log(windowWidth);
+    //   if (windowWidth <= 1400) {
+    //     swiper = new Swiper('.mySwiper', {
+    //       direction: 'horizontal',
+    //       autoHeight: "auto",
+    //       spaceBetween: 100,
+    //       pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //       },
+    //     });
+    //   } else {
+    //     swiper = new Swiper('.mySwiper', {
+    //       direction: 'vertical',
+    //       autoHeight: "auto",
+    //       spaceBetween: 100,
+    //       pagination: {
+    //         el: '.swiper-pagination',
+    //         clickable: true,
+    //       },
+    //     });
+    //   }
+    // }
 
     // const arrayListSliders = document.querySelectorAll(".card-slider-brands");
 
@@ -1285,22 +1289,22 @@
     //   });
     // });
 
-    initSwiper();
+  //   initSwiper();
 
 
-    window.addEventListener('resize', function () {
-      if (swiper) {
-        swiper.destroy(true, true);
-      }
-      initSwiper();
-    });
+  //   window.addEventListener('resize', function () {
+  //     if (swiper) {
+  //       swiper.destroy(true, true);
+  //     }
+  //     initSwiper();
+  //   });
 
 
-    function goToSlide(slideId) {
+  //   function goToSlide(slideId) {
 
-      document.querySelector(slideId).scrollIntoView({ behavior: 'smooth' });
+  //     document.querySelector(slideId).scrollIntoView({ behavior: 'smooth' });
 
-    }
+  //   }
 
 
 
