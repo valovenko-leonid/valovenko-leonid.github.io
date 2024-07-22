@@ -283,6 +283,7 @@ button:focus {
   background-size: cover;
   width: 893px;
   height: 927px;
+  z-index: -1;
   left: 0px;
   bottom: 0px;
   position: absolute;
@@ -1459,7 +1460,6 @@ footer .footer_logo img {
 
 .section_supply {
   position: relative;
-  z-index: 4;
   margin-top: 139px;
 }
 @media (max-width: 991px) {
