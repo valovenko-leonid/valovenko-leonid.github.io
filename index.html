@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ваш заголовок</title>
+  <title>Indastrial Module</title>
   <!-- <link rel="stylesheet" href="styles.css"> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,12 +15,13 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/misc/favicon.png">
 
   <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
   <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
   </link>
 
-<link rel="icon" href="favicon.ico"><script defer src="assets/js/app.js"></script><link href="assets/css/app.css" rel="stylesheet"></head>
+<link rel="icon" href="favicon.jpeg"><script defer src="assets/js/app.js"></script><link href="assets/css/app.css" rel="stylesheet"></head>
 
 <body>
   <header>
@@ -32,17 +33,17 @@
 
         <div class="header__phones item desctop_only">
           <div class="phones__location font-400-12">Регионы</div>
-          <div class="phones__number"><a class="font-700-16" href="tel:+7999999999">+7 (999) 99-99-99</a></div>
+          <div class="phones__number"><a class="font-700-16" href="tel:88003336417">8-800-333-64-17</a></div>
         </div>
 
         <div class="header__phones item desctop_only">
           <div class="phones__location font-400-12">Москва</div>
-          <div class="phones__number"><a class="font-700-16" href="tel:+7999999999">+7 (999) 99-99-99</a></div>
+          <div class="phones__number"><a class="font-700-16" href="tel:+74956461427">+7 (495) 646-14-27</a></div>
         </div>
 
         <div class="header__info item desctop_only">
           <div class="info__worktime font-700-12">пн-пт с 9:00 до 19:00</div>
-          <div class="info__email"><a class="font-400-14" href="mailto:example@yandex.ru">example@yandex.ru</a></div>
+          <div class="info__email"><a class="font-400-14" href="mailto:sales@i-module.ru">sales@i-module.ru</a></div>
         </div>
         <div class="item desctop_only contact-button">
           <button class="js-openModalBtn btn btn-style-1 font-700-16" data-modal="modalCallback">Cвязаться с
@@ -50,8 +51,8 @@
         </div>
 
         <div class="header__info item mobile_only">
-          <div class="phones__number"><a class="font-700-16" href="tel:+7999999999">+7 (999) 99-99-99</a></div>
-          <div class="info__email"><a class="font-400-14" href="mailto:example@yandex.ru">example@yandex.ru</a></div>
+          <div class="phones__number"><a class="font-700-16" href="tel:+74956461427">+7 (495) 646-14-27</a></div>
+          <div class="info__email"><a class="font-400-14" href="mailto:sales@i-module.ru">sales@i-module.ru</a></div>
         </div>
 
         <div class="item mobile_only burget_container">
@@ -59,9 +60,6 @@
             <img src="static/img/burger.svg" alt="">
           </div>
         </div>
-
-
-
 
       </div>
     </div>
@@ -152,9 +150,11 @@
               <div class="card-title font-700-24">Эксклюзив</div>
             </div>
             <div class="back">
-
+              <div class="flex-row">
               <div class="card-pre-title font-700-24">Эксклюзив</div>
-              <div class="card-title font-700-36">Наши<br>возможности<br>шире!</div>
+              <div class="card-title font-700-36">Наши <br>возможности <br>шире!</div>
+              </div>
+              <div class="flex-row">
               <div class="card-desc"><strong>Поставки любого</strong> оборудования и запчастей для вашего производства.
                 Мы можем привезти даже роботов из Японии и турбины из Канады.</div>
               <div class="card-desc font-700-16" style="margin-top:auto;text-transform: uppercase;"><strong>Опишите вашу
@@ -166,6 +166,7 @@
                 <button type="button" class="js-openModalBtn font-700-16 btn btn-style-2" data-modal="modalForm">Описать
                   потребность</button>
               </div>
+            </div>
 
             </div>
           </div>
@@ -433,15 +434,15 @@
       <div class="container">
         <div class="grid-template">
 
-          <form class="section_callback_form" action="">
+          <form id="formPage" class="section_callback_form" action="">
             <div class="input-container">
-              <input type="text" id="name" required>
-              <label for="name">Как к Вам обращаться?</label>
+              <input type="text" id="formPage_name" required>
+              <label for="formPage_name">Как к Вам обращаться?</label>
               <span class="focus-border"></span>
             </div>
 
             <div class="input-container">
-              <select class="contact_method" data-code="first" required>
+              <select class="contact_method" name="selectContact" data-code="first">
                 <option value="" disabled selected>Как с Вами связаться?</option>
                 <option value="email">E-mail</option>
                 <option value="phone">Телефон</option>
@@ -453,26 +454,26 @@
 
 
             <div class="input-container input_hidden phone_container" data-code="first">
-              <input name="callback_phone" id="callback_phone" type="text" autocomplete="tel"
-                placeholder="+7 (___) ___-__-__" required>
-              <label class="font-h5" for="callback_phone">Введите номер телефона</label>
+              <input name="phone" id="formPage_phone" type="text" autocomplete="tel"
+                placeholder="+7 (___) ___-__-__">
+              <label class="font-h5" for="formPage_phone">Введите номер телефона</label>
               <span class="focus-border"></span>
             </div>
 
             <div class="input-container input_hidden email_container" data-code="first">
-              <input name="callback_email" type="email" id="callback_email" placeholder=" " required>
-              <label class="font-h5" for="callback_email">Введите email</label>
+              <input name="email" type="email" id="formPage_email" placeholder="">
+              <label class="font-h5" for="formPage_email">Введите email</label>
               <span class="focus-border"></span>
             </div>
 
             <div class="input-container input_hidden another_container" data-code="first">
-              <input name="callback_another" type="email" id="callback_another" placeholder=" " required>
-              <label class="font-h5" for="callback_another">Введите иной способ</label>
+              <input name="another" type="email" id="formPage_another" placeholder="">
+              <label class="font-h5" for="formPage_another">Введите иной способ</label>
               <span class="focus-border"></span>
             </div>
 
             <div class="input-container">
-              <select class="contact_method" data-code="second" required>
+              <select class="contact_method" name="selectContactAlter" data-code="second">
                 <option value="" disabled selected>Альтернативный способ связи</option>
                 <option value="email">E-mail</option>
                 <option value="phone">Телефон</option>
@@ -482,28 +483,28 @@
             </div>
 
             <div class="input-container input_hidden phone_container" data-code="second">
-              <input name="callback_phone_alter" id="callback_phone_alter" type="text" autocomplete="tel"
-                placeholder="+7 (___) ___-__-__" required>
-              <label class="font-h5" for="callback_phone_alter">Введите номер телефона</label>
+              <input name="phone_alter" id="formPage_phone_alter" type="text" autocomplete="tel"
+                placeholder="+7 (___) ___-__-__">
+              <label class="font-h5" for="formPage_phone_alter">Введите номер телефона</label>
               <span class="focus-border"></span>
             </div>
 
             <div class="input-container input_hidden email_container" data-code="second">
-              <input name="callback_email_alter" type="email" id="callback_email_alter" placeholder=" " required>
-              <label class="font-h5" for="callback_email_alter">Введите email</label>
+              <input name="email_alter" type="email" id="formPage_email_alter" placeholder="" >
+              <label class="font-h5" for="formPage_email_alter">Введите email</label>
               <span class="focus-border"></span>
             </div>
 
             <div class="input-container input_hidden another_container" data-code="second">
-              <input name="callback_another_alter" type="email" id="callback_another_alter" placeholder=" " required>
-              <label class="font-h5" for="callback_another_alter">Введите иной способ</label>
+              <input name="another_alter" type="email" id="formPage_another_alter" placeholder="" >
+              <label class="font-h5" for="formPage_another_alter">Введите иной способ</label>
               <span class="focus-border"></span>
             </div>
 
 
             <div class="input-container">
-              <input type="text" id="callback_desc" required placeholder="здесь Вы можете описать суть своей задачи">
-              <label class="font-h5" for="callback_desc">Опишите Вашу задачу</label>
+              <input name="desc" type="text" id="formPage_desc" placeholder="здесь Вы можете описать суть своей задачи">
+              <label class="font-h5" for="formPage_desc">Опишите Вашу задачу</label>
 
               <span class="focus-border"></span>
             </div>
@@ -511,20 +512,26 @@
             <label class="file-input-wrapper">
               <img src="static/img/file-icon.svg" alt="иконка" class="file-icon" width="24" height="24">
               <span class="file-text">Прикрепить файл</span>
-              <input type="file">
+              <input name="file" type="file" id="formPage_file">
             </label>
 
 
 
-            <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
+            <button type="button" class="js-button-send font-700-16 contact-button btn btn-style-1">Отправить</button>
             <div class="callback_checkbox_container">
-              <input type="checkbox" id="callback_checkbox">
+              <input name="checkbox" type="checkbox" id="formPage_checkbox" required>
 
               <div class="js-openModalBtn button_personan_data font-400-14" data-modal="modalPersonalData">
                 Согласие на обработку персональных данных
               </div>
             </div>
           </form>
+          <div class="success_form section_callback_form">
+            <div class="item font-700-36">Спасибо!</div>
+            <div class="item font-400-16">Ваше обращение принято.</div>
+            <div class="item font-400-16">Мы свяжемся с Вами в ближайшее время. 
+              Обработка запроса может занять до 1 рабочего дня.</div>
+          </div>
 
           <div class="section_callback_info">
             <div class="item font-700-16">
@@ -556,76 +563,76 @@
         <div class="font-h1">
           ПОСТАВЛЯЕМ
         </div>
-        <div class="logo-matrix-container" style="min-height:740px">
+        <div class="logo-matrix-container" style="height: 616px;">
 
-          <div class="logo" style="top: 26px; left: 2px; width: 188px; height: 58px;">
-            <img src="static/img/logo/1.webp" alt="Logo static/img/logo/1.webp">
+          <div class="logo" id="supplyLogo_1" >
+            <img src="static/img/logo/1.webp"  alt="Logo static/img/logo/1.webp">
           </div>
-          <div class="logo" style="top: 162px; left: 0px; width: 148px; height: 35px;">
-            <img src="static/img/logo/5.webp" alt="Logo static/img/logo/5.webp">
+          <div class="logo" id="supplyLogo_5" >
+            <img src="static/img/logo/5.webp"  alt="Logo static/img/logo/5.webp">
           </div>
-          <div class="logo" style="top: 175px; left: 845px; width: 209px; height: 53px;">
-            <img src="static/img/logo/8.webp" alt="Logo static/img/logo/8.webp">
+          <div class="logo" id="supplyLogo_8" >
+            <img src="static/img/logo/8.webp"  alt="Logo static/img/logo/8.webp">
           </div>
-          <div class="logo" style="top: 0px; left: 676px; width: 297px; height: 84px;">
-            <img src="static/img/logo/3.webp" alt="Logo static/img/logo/3.webp">
+          <div class="logo" id="supplyLogo_3" >
+            <img src="static/img/logo/3.webp"  alt="Logo static/img/logo/3.webp">
           </div>
-          <div class="logo" style="top: 162px; left: 236px; width: 127px; height: 61px;">
-            <img src="static/img/logo/6.webp" alt="Logo static/img/logo/6.webp">
+          <div class="logo" id="supplyLogo_6" >
+            <img src="static/img/logo/6.webp"  alt="Logo static/img/logo/6.webp">
           </div>
-          <div class="logo" style="top: 312px; left: 2px; width: 154px; height: 48px;">
-            <img src="static/img/logo/10.webp" alt="Logo static/img/logo/10.webp">
+          <div class="logo" id="supplyLogo_10" >
+            <img src="static/img/logo/10.webp"  alt="Logo static/img/logo/10.webp">
           </div>
-          <div class="logo" style="top: 14px; left: 351px; width: 167px; height: 40px;">
-            <img src="static/img/logo/2.webp" alt="Logo static/img/logo/2.webp">
+          <div class="logo" id="supplyLogo_2" >
+            <img src="static/img/logo/2.webp"  alt="Logo static/img/logo/2.webp">
           </div>
-          <div class="logo" style="top: 5px; left: 1159px; width: 113px; height: 61px;">
-            <img src="static/img/logo/4.webp" alt="Logo static/img/logo/4.webp">
+          <div class="logo" id="supplyLogo_4" >
+            <img src="static/img/logo/4.webp"  alt="Logo static/img/logo/4.webp">
           </div>
-          <div class="logo" style="top: 335px; left: 1021px; width: 261px; height: 102px;">
-            <img src="static/img/logo/14.webp" alt="Logo static/img/logo/14.webp">
+          <div class="logo" id="supplyLogo_14" >
+            <img src="static/img/logo/14.webp"  alt="Logo static/img/logo/14.webp">
           </div>
-          <div class="logo" style="top: 323px; left: 232px; width: 131px; height: 27px;">
-            <img src="static/img/logo/11.webp" alt="Logo static/img/logo/11.webp">
+          <div class="logo" id="supplyLogo_11" >
+            <img src="static/img/logo/11.webp"  alt="Logo static/img/logo/11.webp">
           </div>
-          <div class="logo" style="top: 428px; left: 2px; width: 197px; height: 37px;">
-            <img src="static/img/logo/15.webp" alt="Logo static/img/logo/15.webp">
+          <div class="logo" id="supplyLogo_15" >  
+            <img src="static/img/logo/15.webp"  alt="Logo static/img/logo/15.webp">
           </div>
-          <div class="logo" style="top: 154px; left: 1138px; width: 144px; height: 85px;">
-            <img src="static/img/logo/9.webp" alt="Logo static/img/logo/9.webp">
+          <div class="logo" id="supplyLogo_9" >
+            <img src="static/img/logo/9.webp"  alt="Logo static/img/logo/9.webp">
           </div>
-          <div class="logo" style="top: 329px; left: 701px; width: 228px; height: 31px;">
-            <img src="static/img/logo/13.webp" alt="Logo static/img/logo/13.webp">
+          <div class="logo" id="supplyLogo_13" >
+            <img src="static/img/logo/13.webp"  alt="Logo static/img/logo/13.webp">
           </div>
-          <div class="logo" style="top: 437px; left: 676px; width: 168px; height: 32px;">
-            <img src="static/img/logo/17.webp" alt="Logo static/img/logo/17.webp">
+          <div class="logo" id="supplyLogo_17" >
+            <img src="static/img/logo/17.webp"  alt="Logo static/img/logo/17.webp">
           </div>
-          <div class="logo" style="top: 486px; left: 897px; width: 159px; height: 50px;">
-            <img src="static/img/logo/18.webp" alt="Logo static/img/logo/18.webp">
+          <div class="logo" id="supplyLogo_18" >
+            <img src="static/img/logo/18.webp"  alt="Logo static/img/logo/18.webp">
           </div>
-          <div class="logo" style="top: 418px; left: 297px; width: 221px; height: 93px;">
-            <img src="static/img/logo/16.webp" alt="Logo static/img/logo/16.webp">
+          <div class="logo" id="supplyLogo_16" >
+            <img src="static/img/logo/16.webp"  alt="Logo static/img/logo/16.webp">
           </div>
-          <div class="logo" style="top: 315px; left: 483px; width: 70px; height: 41px;">
-            <img src="static/img/logo/12.webp" alt="Logo static/img/logo/12.webp">
+          <div class="logo" id="supplyLogo_12" >
+            <img src="static/img/logo/12.webp"  alt="Logo static/img/logo/12.webp">
           </div>
-          <div class="logo" style="top: 521px; left: 1138px; width: 127px; height: 56px;">
-            <img src="static/img/logo/23.webp" alt="Logo static/img/logo/23.webp">
+          <div class="logo" id="supplyLogo_23" >
+            <img src="static/img/logo/23.webp"  alt="Logo static/img/logo/23.webp">
           </div>
-          <div class="logo" style="top: 584px; left: 798px; width: 275px; height: 32px;">
-            <img src="static/img/logo/22.webp" alt="Logo static/img/logo/22.webp">
+          <div class="logo" id="supplyLogo_22" >
+            <img src="static/img/logo/22.webp"  alt="Logo static/img/logo/22.webp">
           </div>
-          <div class="logo" style="top: 576px; left: 2px; width: 267px; height: 37px;">
-            <img src="static/img/logo/19.webp" alt="Logo static/img/logo/19.webp">
+          <div class="logo" id="supplyLogo_19" >
+            <img src="static/img/logo/19.webp"  alt="Logo static/img/logo/19.webp">
           </div>
-          <div class="logo" style="top: 566px; left: 358px; width: 198px; height: 36px;">
-            <img src="static/img/logo/20.webp" alt="Logo static/img/logo/20.webp">
+          <div class="logo" id="supplyLogo_20" >
+            <img src="static/img/logo/20.webp"  alt="Logo static/img/logo/20.webp">
           </div>
-          <div class="logo" style="top: 539px; left: 642px; width: 117px; height: 34px;">
-            <img src="static/img/logo/21.webp" alt="Logo static/img/logo/21.webp">
+          <div class="logo" id="supplyLogo_21" >
+            <img src="static/img/logo/21.webp"  alt="Logo static/img/logo/21.webp">
           </div>
-          <div class="logo" style="top: 154px; left: 456px; width: 310px; height: 94px;">
-            <img src="static/img/logo/7.webp" alt="Logo static/img/logo/7.webp">
+          <div class="logo" id="supplyLogo_7" >
+            <img src="static/img/logo/7.webp"  alt="Logo static/img/logo/7.webp">
           </div>
         </div>
         <div class="grid-template">
@@ -652,25 +659,23 @@
             <div class="swiper-slide" id="slide1">
               <div class="swiper-content">
                 <div class="history_img">
-                  <img src="static/img/hist.webp" alt="">
+                  <img src="static/img/istorii-uspeha-1.jpg" alt="">
                 </div>
                 <div class="history_info">
                   <div class="item history_logo">
-                    <img src="static/img/logohist.webp" alt="">
+                    <img src="static/img/logo-seda-link-2.png" style="    max-width: 150px;" alt="">
                   </div>
                   <div class="item history_text">
-                    Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных решениях
-                    и высококачественных услугах, удовлетворяя потребности самых требовательных клиентов.
-                    Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных решениях
-                    и высококачественных услугах.
+                    Компания «СЕДА-Линк» занимается проектированием, строительством, реконструкцией, капитальным ремонтом, текущим обслуживанием и вводом в эксплуатацию объектов связи общего назначения.
                   </div>
                   <div class="item history_review">
 
                     <div class="review_container">
                       <div class="font-700-20">Отзыв</div>
                       <div class="review_text font-400-14">
-                        Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных
-                        решенияхОписание что делали — успешный лидер в своей отрасли. Мы специализируемся на
+                        <p>Специалисты Industrial Module показали высокий уровень профессионализма при подборе сложно-технического оборудования. 
+                        </p>
+                        <p>На основании технических характеристик информационной системы смогли провести экспресс-обследование и предложить несколько вариантов решения, позволивших оптимизировать состав и стоимость предложения.</p>
                       </div>
                     </div>
                   </div>
@@ -678,63 +683,9 @@
               </div>
             </div>
 
-            <div class="swiper-slide" id="slide2">
-              <div class="swiper-content">
-                <div class="history_img">
-                  <img src="static/img/hist.webp" alt="">
-                </div>
-                <div class="history_info">
-                  <div class="item history_logo">
-                    <img src="static/img/logohist.webp" alt="">
-                  </div>
-                  <div class="item history_text">
-                    Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных решениях
-                    и высококачественных услугах, удовлетворяя потребности самых требовательных клиентов.
-                    Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных решениях
-                    и высококачественных услугах.
-                  </div>
-                  <div class="item history_review">
+        
 
-                    <div class="review_container">
-                      <div class="font-700-20">Отзыв</div>
-                      <div class="review_text font-400-14">
-                        Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных
-                        решенияхОписание что делали — успешный лидер в своей отрасли. Мы специализируемся на
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="swiper-slide" id="slide3">
-              <div class="swiper-content">
-                <div class="history_img">
-                  <img src="static/img/hist.webp" alt="">
-                </div>
-                <div class="history_info">
-                  <div class="item history_logo">
-                    <img src="static/img/logohist.webp" alt="">
-                  </div>
-                  <div class="item history_text">
-                    Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных решениях
-                    и высококачественных услугах, удовлетворяя потребности самых требовательных клиентов.
-                    Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных решениях
-                    и высококачественных услугах.
-                  </div>
-                  <div class="item history_review">
-
-                    <div class="review_container">
-                      <div class="font-700-20">Отзыв</div>
-                      <div class="review_text font-400-14">
-                        Описание что делали — успешный лидер в своей отрасли. Мы специализируемся на инновационных
-                        решенияхОписание что делали — успешный лидер в своей отрасли. Мы специализируемся на
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+           
           </div>
         </div>
         <div class="bg_right bg_right-blur"></div>
@@ -791,17 +742,17 @@
         </div>
         <div class="item footer__phones ">
           <div class="phones__location font-400-12">Регионы</div>
-          <div class="phones__number font-700-16"><a href="tel:+7999999999">+7 (999) 99-99-99</a></div>
+          <div class="phones__number font-700-16"><a href="tel:88003336417">8-800-333-64-17</a></div>
         </div>
 
         <div class="item footer__phones">
           <div class="phones__location font-400-12">Москва</div>
-          <div class="phones__number font-700-16"><a href="tel:+7999999999">+7 (999) 99-99-99</a></div>
+          <div class="phones__number font-700-16"><a href="tel:+74956461427">+7 (495) 646-14-27</a></div>
         </div>
 
         <div class="item footer__info">
           <div class="info__worktime font-700-12">пн-пт с 9:00 до 19:00</div>
-          <div class="info__email"><a class="font-400-14" href="mailto:example@yandex.ru">example@yandex.ru</a></div>
+          <div class="info__email"><a class="font-400-14" href="mailto:sales@i-module.ru">sales@i-module.ru</a></div>
         </div>
       </div>
 
@@ -828,7 +779,7 @@
       <div class="grid-template mobile_only">
         <div class="item footer__info">
           <div class="info__worktime font-700-12">пн-пт с 9:00 до 19:00</div>
-          <div class="info__email"><a class="font-400-14" href="mailto:example@yandex.ru">example@yandex.ru</a></div>
+          <div class="info__email"><a class="font-400-14" href="mailto:sales@i-module.ru">sales@i-module.ru</a></div>
         </div>
       </div>
 
@@ -896,14 +847,14 @@
       <span class="close"> </span>
       <form id="formCallback" action="">
         <div class="input-container">
-          <input type="text" id="formCallback_name" required>
+          <input type="text" id="formCallback_name" placeholder="" required>
           <label for="formCallback_name">Как к Вам обращаться?</label>
           <span class="focus-border"></span>
         </div>
 
 
         <div class="input-container">
-          <select class="contact_method" data-code="first" id="selectElement" required>
+          <select class="contact_method" name="selectContact" data-code="first" id="selectElement">
             <option value="" disabled selected>Как с Вами связаться?</option>
             <option value="email">E-mail</option>
             <option value="phone">Телефон</option>
@@ -913,26 +864,25 @@
 
         </div>
         <div class="input-container input_hidden phone_container" data-code="first">
-          <input name="form_phone" id="form_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__"
-            required>
-          <label class="font-h5" for="form_phone">Введите номер телефона</label>
+          <input name="form_phone" id="modalCallback_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+          <label class="font-h5" for="modalCallback_phone">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden email_container" data-code="first">
-          <input name="form_email" type="email" id="form_email" placeholder=" " required>
+          <input name="form_email" type="email" id="form_email" placeholder="" >
           <label class="font-h5" for="form_email">Введите email</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden another_container" data-code="first">
-          <input name="form_another" type="text" id="form_another" placeholder=" " required>
+          <input name="form_another" type="text" id="form_another" placeholder="" >
           <label class="font-h5" for="form_another">Введите иной способ</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container">
-          <select class="contact_method" data-code="second" required>
+          <select class="contact_method" name="selectContactAlter" data-code="second">
             <option value="" disabled selected>Альтернативный способ связи</option>
             <option value="email">E-mail</option>
             <option value="phone">Телефон</option>
@@ -943,25 +893,25 @@
         </div>
         <div class="input-container input_hidden phone_container" data-code="second">
           <input name="form_phone_alter" id="form_phone_alter" type="text" autocomplete="tel"
-            placeholder="+7 (___) ___-__-__" required>
+            placeholder="+7 (___) ___-__-__" >
           <label class="font-h5" for="form_phone_alter">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden email_container" data-code="second">
-          <input name="form_email_alter" type="email" id="form_email_alter" placeholder=" " required>
+          <input name="form_email_alter" type="email" id="form_email_alter" placeholder="">
           <label class="font-h5" for="form_email_alter">Введите email</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden another_container" data-code="second">
-          <input name="form_another_alter" type="text" id="form_another_alter" placeholder=" " required>
+          <input name="form_another_alter" type="text" id="form_another_alter" placeholder="" >
           <label class="font-h5" for="form_another_alter">Введите иной способ</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container">
-          <input name="form_desc" type="text" id="form_desc" required
+          <input name="form_desc" type="text" id="form_desc"
             placeholder="здесь Вы можете описать суть своей задачи">
           <label class="font-h5" for="form_desc">Опишите Вашу задачу</label>
 
@@ -975,9 +925,9 @@
         </label>
 
 
-        <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
+        <button type="button" class="js-button-send font-700-16 contact-button btn btn-style-1">Отправить</button>
         <div class="callback_checkbox_container">
-          <input type="checkbox" id="cformCallback_checkbox" required>
+          <input name="checkbox" type="checkbox" id="cformCallback_checkbox" required>
 
           <div class="js-openModalBtn button_personan_data font-400-14" data-modal="modalPersonalData">
             Согласие на обработку персональных данных
@@ -987,6 +937,12 @@
           </div>
         </div>
       </form>
+      <div class="success_form">
+        <div class="item font-700-36">Спасибо!</div>
+        <div class="item font-400-16">Ваше обращение принято.</div>
+        <div class="item font-400-16">Мы свяжемся с Вами в ближайшее время. 
+          Обработка запроса может занять до 1 рабочего дня.</div>
+      </div>
     </div>
   </div>
 
@@ -996,21 +952,21 @@
       <div class="font-700-24">
         Опишите вашу задачу и мы точно вам поможем!
       </div>
-      <form action="">
+      <form id="formForm" action="">
         <div class="input-container">
-          <input name="form_name" type="text" id="form_name" required>
-          <label for="form_name">Как к Вам обращаться?</label>
+          <input name="name" type="text" id="formForm_name" required>
+          <label for="formForm_name">Как к Вам обращаться?</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container">
-          <input name="form_activity" type="text" id="form_activity" required>
-          <label for="form_activity">В какой сфере работаете?</label>
+          <input name="activity" type="text" id="formForm_activity">
+          <label for="formForm_activity">В какой сфере работаете?</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container">
-          <select class="contact_method" data-code="first" required>
+          <select class="contact_method" name="selectContact" data-code="first">
             <option value="" disabled selected>Как с Вами связаться?</option>
             <option value="email">E-mail</option>
             <option value="phone">Телефон</option>
@@ -1022,26 +978,25 @@
 
 
         <div class="input-container input_hidden phone_container" data-code="first">
-          <input name="form_phone" id="form_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__"
-            required>
-          <label class="font-h5" for="form_phone">Введите номер телефона</label>
+          <input name="phone" id="formForm_phone" type="text" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+          <label class="font-h5" for="formForm_phone">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden email_container" data-code="first">
-          <input name="form_email" type="email" id="form_email" placeholder=" " required>
-          <label class="font-h5" for="form_email">Введите email</label>
+          <input name="email" type="email" id="formForm_email" placeholder="" >
+          <label class="font-h5" for="formForm_email">Введите email</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden another_container" data-code="first">
-          <input name="form_another" type="email" id="form_another" placeholder=" " required>
-          <label class="font-h5" for="form_another">Введите иной способ</label>
+          <input name="another" type="email" id="formForm_another" placeholder="" >
+          <label class="font-h5" for="formForm_another">Введите иной способ</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container">
-          <select class="contact_method" data-code="second" required>
+          <select class="contact_method" name="selectContactAlter" data-code="second">
             <option value="" disabled selected>Альтернативный способ связи</option>
             <option value="email">E-mail</option>
             <option value="phone">Телефон</option>
@@ -1051,41 +1006,51 @@
         </div>
 
         <div class="input-container input_hidden phone_container" data-code="second">
-          <input name="form_phone_alter" id="form_phone_alter" type="text" autocomplete="tel"
-            placeholder="+7 (___) ___-__-__" required>
-          <label class="font-h5" for="form_phone_alter">Введите номер телефона</label>
+          <input name="phone_alter" id="formForm_phone_alter" type="text" autocomplete="tel"
+            placeholder="+7 (___) ___-__-__">
+          <label class="font-h5" for="formForm_phone_alter">Введите номер телефона</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden email_container" data-code="second">
-          <input name="form_email_alter" type="email" id="form_email_alter" placeholder=" " required>
-          <label class="font-h5" for="form_email_alter">Введите email</label>
+          <input name="email_alter" type="email" id="formForm_email_alter" placeholder="">
+          <label class="font-h5" for="formForm_email_alter">Введите email</label>
           <span class="focus-border"></span>
         </div>
 
         <div class="input-container input_hidden another_container" data-code="second">
-          <input name="form_another_alter" type="email" id="form_another_alter" placeholder=" " required>
-          <label class="font-h5" for="form_another_alter">Введите иной способ</label>
+          <input name="another_alter" type="email" id="formForm_another_alter" placeholder="">
+          <label class="font-h5" for="formForm_another_alter">Введите иной способ</label>
+          <span class="focus-border"></span>
+        </div>
+
+        <div class="input-container">
+          <input name="desc" type="text" id="formForm_desc" placeholder="здесь Вы можете описать суть своей задачи">
+          <label class="font-h5" for="formForm_desc">Опишите Вашу потребность</label>
+
           <span class="focus-border"></span>
         </div>
 
         <label class="file-input-wrapper">
           <img src="static/img/file-icon.svg" alt="иконка" class="file-icon" width="24" height="24">
           <span class="file-text">Прикрепить файл</span>
-          <input type="file">
+          <input name="file" type="file" id="formForm_file">
         </label>
 
-
-
-
-        <button type="submit" class="font-700-16 contact-button btn btn-style-1">Отправить</button>
+        <button type="button" class="js-button-send font-700-16 contact-button btn btn-style-1">Отправить</button>
         <div class="callback_checkbox_container">
-          <input type="checkbox" id="form_checkbox" required>
+          <input name="checkbox" type="checkbox" id="form_checkbox" required>
           <div class="js-openModalBtn button_personan_data font-400-14" data-modal="modalPersonalData">
             Согласие на обработку персональных данных
           </div>
         </div>
       </form>
+      <div class="success_form">
+        <div class="item font-700-36">Спасибо!</div>
+        <div class="item font-400-16">Ваше обращение принято.</div>
+        <div class="item font-400-16">Мы свяжемся с Вами в ближайшее время. 
+          Обработка запроса может занять до 1 рабочего дня.</div>
+      </div>
     </div>
   </div>
 
@@ -1093,24 +1058,18 @@
     <div class="modal-content modal-content__info">
       <span class="close"></span>
       <div class="font-700-36">Как это работает?</div>
-      <p>Разработка сайта ведется на сервере исполнителя. После завершения работ и принятия работ Заказчиком Исполнитель
-        переносит сайт на сервер Заказчика. Заказчик предоставляет для этого необходимые доступы. Исполнитель
-        предоставляет заказчику полностью функционирующий сайт, исходные графические материалы по дизайну, все
-        необходимые данные для доступа к системе управления сайтом (аккаунты, пароли, адреса серверов и т.п.).</p>
-      <p>Разработка сайта ведется на сервере исполнителя. После завершения работ и принятия работ Заказчиком Исполнитель
-        переносит сайт на сервер Заказчика. Заказчик предоставляет для этого необходимые доступы. Исполнитель
-        предоставляет заказчику полностью функционирующий сайт, исходные графические материалы по дизайну, все
-        необходимые данные для доступа к системе управления сайтом (аккаунты, пароли, адреса серверов и т.п.).
-      </p>
-      <p>Разработка сайта ведется на сервере исполнителя. После завершения работ и принятия работ Заказчиком Исполнитель
-        переносит сайт на сервер Заказчика. Заказчик предоставляет для этого необходимые доступы. Исполнитель
-        предоставляет заказчику.</p>
+      <p>У вас есть заказчик. А у нас — налаженная система работы!</p>
+      <p>Получайте бонус за каждого приведенного заказчика. Официально, по договору.</p>
+      <p>Хотите поучаствовать? Пишите на <a href="mailto:sales@i-module.ru">sales@i-module.ru</a>. Обсудим подробные условия.</p>
     </div>
   </div>
 
   <div id="modalPersonalData" class="modal">
     <div class="modal-content modal-content__info">
       <span class="close"></span>
+      <div class="inner-container">
+
+      
       <p>
       Настоящим я, далее – «Субъект Персональных Данных», во исполнение требований Федерального закона от 27.07.2006 г.
       № 152-ФЗ «О персональных данных» (с изменениями и дополнениями) свободно, своей волей и в своем интересе даю свое
@@ -1164,6 +1123,7 @@
       <li>предоставление данных третьих лиц без их согласия влечет ответственность в соответствии с действующим
       законодательством Российской Федерации.</li>
     </ol>
+  </div>
     </div>
   </div>
 
@@ -1232,12 +1192,8 @@
     document.addEventListener("DOMContentLoaded", () => {
 
      
-
-
       const logos = document.querySelectorAll('.logo-matrix-container .logo>img');
-
       const imagesCont = document.querySelectorAll('.logo-matrix-container .logo');
-
 
       let imagesLoaded = 0;
 
@@ -1291,7 +1247,8 @@
     function initSwiper() {
       var windowWidth = window.innerWidth;
 
-      if (windowWidth <= 768) {
+      console.log(windowWidth);
+      if (windowWidth <= 1400) {
         swiper = new Swiper('.mySwiper', {
           direction: 'horizontal',
           autoHeight: "auto",

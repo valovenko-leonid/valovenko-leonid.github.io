@@ -5139,7 +5139,9 @@ class Landing {
       container: document.querySelector(container),
       bodyContainer: document.querySelector(bodyContainer),
       btnOpenModal: document.querySelectorAll(btnOpenModal),
-      btnCloseModal: document.querySelectorAll(btnCloseModal)
+      btnCloseModal: document.querySelectorAll(btnCloseModal),
+      headerBlock: document.querySelector('header'),
+      btnSend: document.querySelectorAll('.js-button-send')
     };
     this.modals = {
       modalCallback: document.getElementById(modalCallback),
@@ -5187,6 +5189,8 @@ class Landing {
     const inputsEmail = modal.querySelectorAll('.email_container');
     const inputsPhone = modal.querySelectorAll('.phone_container');
     const inputsAnother = modal.querySelectorAll('.another_container');
+    const form = modal.querySelector('form');
+    const success = modal.querySelector('.success_form');
     inputsEmail.forEach(input => {
       if (!input.classList.contains('input_hidden')) {
         input.classList.add("input_hidden");
@@ -5214,6 +5218,10 @@ class Landing {
     // });
 
     if (modal) {
+      if (success) {
+        success.style.display = 'none';
+        form.style.display = '';
+      }
       modal.style.display = 'none';
       bodyContainer.style.overflow = "auto";
     }
@@ -5254,7 +5262,6 @@ class Landing {
     const {
       popupMenu
     } = this.elements;
-    console.log(popupMenu);
     if (popupMenu) {
       popupMenu.classList.remove('menu-active');
     }
@@ -5317,6 +5324,24 @@ class Landing {
     const distanceFromRight = window.innerWidth - rectContainer.right - 116;
     menuStick.style.right = distanceFromRight + 'px';
   }
+  sendForm(e) {
+    let modal = e.target.closest('.modal');
+    if (!modal) {
+      modal = e.target.closest('.section_callback');
+    }
+    const form = modal.querySelector('form');
+    const success = modal.querySelector('.success_form');
+    const data = new FormData(form);
+    //data send to bitrix24 for lead
+
+    success.style.display = 'flex';
+    form.style.display = 'none';
+    setTimeout(() => {
+      if (modal.classList.contains("modal") && modal.style.display != 'none' && success.style.display != 'none') {
+        this.closeModal(modal);
+      }
+    }, 2100);
+  }
   handlerAddSmoothScroll(btn, event) {
     event.preventDefault();
     const href = btn.getAttribute('href');
@@ -5332,12 +5357,9 @@ class Landing {
   handlerChangeContact(e) {
     const form = e.target.closest('form');
     const codeField = e.target.dataset.code;
-    console.log(codeField);
-    console.log(e.target.value);
     const phoneContainer = form.querySelector('.phone_container[data-code=' + codeField + ']');
     const emailContainer = form.querySelector('.email_container[data-code=' + codeField + ']');
     const anotherContainer = form.querySelector('.another_container[data-code=' + codeField + ']');
-    console.log(emailContainer);
     if (e.target.value === 'phone') {
       phoneContainer.classList.remove('input_hidden');
       anotherContainer.classList.add('input_hidden');
@@ -5374,14 +5396,33 @@ class Landing {
       }
     });
   }
+  setFixedMenu() {
+    const {
+      headerBlock,
+      bodyContainer
+    } = this.elements;
+    const rect = headerBlock.getBoundingClientRect();
+    if (window.scrollY > 30) {
+      headerBlock.classList.add('header_scrolled');
+      const fullheight = rect.height + 30;
+      bodyContainer.style.paddingTop = fullheight + 'px';
+    } else {
+      headerBlock.classList.remove('header_scrolled');
+      bodyContainer.style.paddingTop = '0px';
+    }
+  }
   attachEventListeners() {
     const {
       stickyMenuLink,
       burgerMenuBtn,
       burgerMenuBtnExit,
       btnOpenModal,
-      btnCloseModal
+      btnCloseModal,
+      btnSend
     } = this.elements;
+    btnSend.forEach(btn => {
+      btn.addEventListener('click', this.sendForm.bind(this));
+    });
     if (burgerMenuBtn) {
       burgerMenuBtn.addEventListener('click', this.handOpenMenu.bind(this));
     }
@@ -5395,6 +5436,7 @@ class Landing {
       btn.addEventListener('click', this.handlerCloseModal.bind(this));
     });
     window.addEventListener('click', this.handlerClickOutbounceModal.bind(this));
+    window.addEventListener('scroll', this.setFixedMenu.bind(this));
     window.addEventListener('scroll', this.handlerHighlightCurrentSection.bind(this));
     window.addEventListener('resize', this.handlerStickMenu.bind(this));
     window.addEventListener('scroll', this.handlerStickMenu.bind(this));
