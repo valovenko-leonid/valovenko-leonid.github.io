@@ -66,7 +66,7 @@ class Landing {
         
 
         //this.handResizeBlocks();
-        this.handAnimation();
+        //this.handAnimation();
         this.attachEventListeners();
         this.handlerStickMenu();
     }
