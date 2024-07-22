@@ -64,9 +64,7 @@ class Landing {
         });
 
         
-
-        //this.handResizeBlocks();
-        //this.handAnimation();
+        this.handAnimation();
         this.attachEventListeners();
         this.handlerStickMenu();
     }
@@ -379,28 +377,28 @@ class Landing {
             btn.addEventListener('click', this.handlerCloseModal.bind(this));
         });
 
-        // window.addEventListener('click', this.handlerClickOutbounceModal.bind(this));
+        window.addEventListener('click', this.handlerClickOutbounceModal.bind(this));
 
 
-        // window.addEventListener('scroll', this.setFixedMenu.bind(this));
+        window.addEventListener('scroll', this.setFixedMenu.bind(this));
 
-        // window.addEventListener('scroll', this.handlerHighlightCurrentSection.bind(this));
+        window.addEventListener('scroll', this.handlerHighlightCurrentSection.bind(this));
 
-        // window.addEventListener('resize', this.handlerStickMenu.bind(this));
-        // window.addEventListener('scroll', this.handlerStickMenu.bind(this));
+        window.addEventListener('resize', this.handlerStickMenu.bind(this));
+        window.addEventListener('scroll', this.handlerStickMenu.bind(this));
 
 
-        // if (stickyMenuLink) {
-        //     stickyMenuLink.forEach(btn => {
-        //         btn.addEventListener('click', (event)=>{this.handlerAddSmoothScroll(btn,event)});
-        //     });
-        // }
+        if (stickyMenuLink) {
+            stickyMenuLink.forEach(btn => {
+                btn.addEventListener('click', (event)=>{this.handlerAddSmoothScroll(btn,event)});
+            });
+        }
 
-        // const contactMethod = document.querySelectorAll('.contact_method');
+        const contactMethod = document.querySelectorAll('.contact_method');
 
-        // contactMethod.forEach((contMethod)=>{
-        //     contMethod.addEventListener('change', this.handlerChangeContact.bind(this));
-        // });
+        contactMethod.forEach((contMethod)=>{
+            contMethod.addEventListener('change', this.handlerChangeContact.bind(this));
+        });
 
     }
 
